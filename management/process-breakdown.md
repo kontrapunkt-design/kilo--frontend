@@ -1,10 +1,9 @@
 # kilodesign.dk process breakdown
 ---------------------------------
-<br>
-<br>
+
 # Design
 ---
-<br>
+
 
 | Page type                   | Hours     |
 | --------------------------- | --------- |
