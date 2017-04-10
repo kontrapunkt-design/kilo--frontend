@@ -2,9 +2,9 @@
 ---------------------------------
 
 
----
+---------------------------------
 # Design
----
+---------------------------------
 
 | Page type                   | Hours     |
 | --------------------------- | --------- |
@@ -78,12 +78,10 @@ This page type is mainly constructed by **`Blog Thumbnail`**.
 #### B. Site footer
 **Site footer** is constructed with social media elements and contact information.
 
-<br>
-<br>
+
 ---------------------------------
 # Front-end interface Design
 ---------------------------------
-<br>
 
 | Elements                                | Hours     |
 | --------------------------------------- | --------- |
@@ -110,12 +108,10 @@ This page type is mainly constructed by **`Blog Thumbnail`**.
 | **Total**                   | **7 h**   |
 
 
-<br>
-<br>
+
 ---------------------------------
 # Back-end twig grav/siteleaf intergration
 ---------------------------------
-<br>
 
 The current site is build with wordpress, we would like to introduce a faster database-less content management system. We recommend [Grav](https://getgrav.org/). Here is the breakdown of the implmentation.
 
@@ -131,12 +127,9 @@ The current site is build with wordpress, we would like to introduce a faster da
 
 
 
-<br>
-<br>
 ---------------------------------
 # Total hour consumption
 ---------------------------------
-
 
 | Phase                                               | Total Hours     |
 | --------------------------------------------------- | ---------       |
