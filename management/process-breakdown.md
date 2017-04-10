@@ -23,7 +23,7 @@
 | **B. Site footer**          | 1 h       |
 | **Total**                   | **4 h**   |
 
-<br>
+
 ---
 ### page type description
 ---
@@ -67,7 +67,7 @@ This page type is mainly constructed by **`Blog Thumbnail`**.
 #### 7. About
 **About** will be a copy page type of the current site.
 
-<br>
+
 ---
 ### Global elements description
 ---
