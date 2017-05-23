@@ -59,7 +59,7 @@ This page type is mainly constructed by **`Blog Thumbnail`**.
 **`Blog Thumbnail`** is constructed with a thumbnail image(or video, depends on budget), blog title, dates and short description of the blog.
 
 #### 5. Blog Single View
-**Blog Single View** should give user a short update on the latest activities. This page type is constructed with a **`Single image`** or **`Youtube embedded video`**, **`Blog title`**, **`Blog date`**, **`Blog description`**. Due to the simple content structure, it is possible to introducing the overlay to reduce the complexity of the site, and improve the user experience.
+**Blog Single View** should give user a short update on the latest activities. This page type is constructed with a **`Single image`** or **`Youtube embedded video`**, **`Blog title`**, **`Blog date`**, **`Blog content`**. Due to the simple content structure, it is possible to introducing the overlay to reduce the complexity of the site, and improve the user experience.
 
 #### 6. Contact
 **Contact** will be a copy page type of the current site.
