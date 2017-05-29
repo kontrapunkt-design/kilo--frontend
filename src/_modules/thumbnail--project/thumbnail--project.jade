@@ -1,0 +1,11 @@
+mixin thumbnail--project(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  div.thumbnail.thumbnail--project(class=spec.__class)
+    a(href="#")
+      .thumbnail--project__content
+        span.dash
+        h2.title.bold #{item.title}
+        p.meta #{item.client} / #{item.releaseYear}
+      .thumbnail--project__media
+        img(src=item.thumbnail)

@@ -1,15 +1,15 @@
 extends _layouts/base
 
-include _modules/link/link
+block config
+  - var baseUrl = ''
+  - var pageType = 'page-index'
+  - var nameSpace = 'home'
+
+//- include _modules/link/link
+include _modules/hero/hero
 
 block content
   .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v2.0.0
+    +hero({
+      __statment: 'At kilo we turn ideas into reality based on strategy, design sensibility and production knowhow'
+      })

@@ -1,0 +1,10 @@
+mixin collection(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.data = spec.data || ''
+
+  div(class=spec.__class)
+    .projects
+      - each item in spec.data
+        include ../thumbnail--project/thumbnail--project
+        +thumbnail--project

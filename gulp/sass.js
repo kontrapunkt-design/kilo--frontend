@@ -18,6 +18,8 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
         outputStyle: 'expanded',
         precision: 10,
         includePaths: [
+          './node_modules/normalize.css',
+          './node_modules/foundation-sites/scss',
           path.join(dirs.source, dirs.styles),
           path.join(dirs.source, dirs.modules)
         ]

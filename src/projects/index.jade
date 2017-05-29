@@ -1,0 +1,15 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+  - var pageType = 'page-projects'
+  - var nameSpace = 'projects'
+
+include ../_modules/collection/collection
+
+block content
+  +collection({
+    __class: 'collection collection--projects',
+    data: site.data.projects
+  })

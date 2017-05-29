@@ -1,0 +1,19 @@
+mixin hero(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.__statment = spec.__statment || ''
+
+  div.hero(class=spec.__class)
+    .row
+      .hero__media
+        video(class="" autoplay loop muted poster="" id="heroVideo")
+          source(src="../videos/hero--01.mp4" type="video/mp4")
+      .hero__content.align-middle
+        .small-12.medium-6.column
+          h1.statement #{spec.__statment}
+        .hero__hint
+          p.hero__hint__text scroll to see more
+          .hero__hint__icon.icon
+            svg
+              use(xlink:href= baseUrl +"images/svg-sprite.svg#icon__scroll")
+    p.help__description Full screen video background hero

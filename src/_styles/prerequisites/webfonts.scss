@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'JuliSans';
+    src: url('../fonts/JuliSans-Light.eot');
+    src: url('../fonts/JuliSans-Light.eot?#iefix') format('embedded-opentype'),
+        //  url('../fonts/JuliSans-Light.woff2') format('woff2'),
+         url('../fonts/JuliSans-Light.woff') format('woff'),
+         url('../fonts/JuliSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JuliSans';
+    src: url('../fonts/JuliSans-Regular.eot');
+    src: url('../fonts/JuliSans-Regular.eot?#iefix') format('embedded-opentype'),
+        //  url('../fonts/JuliSans-Regular.woff2') format('woff2'),
+         url('../fonts/JuliSans-Regular.woff') format('woff'),
+         url('../fonts/JuliSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JuliSans';
+    src: url('../fonts/JuliSans-Medium.eot');
+    src: url('../fonts/JuliSans-Medium.eot?#iefix') format('embedded-opentype'),
+        //  url('../fonts/JuliSans-Medium.woff2') format('woff2'),
+         url('../fonts/JuliSans-Medium.woff') format('woff'),
+         url('../fonts/JuliSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}@font-face {
+    font-family: 'JuliSans';
+    src: url('../fonts/JuliSans-Bold.eot');
+    src: url('../fonts/JuliSans-Bold.eot?#iefix') format('embedded-opentype'),
+        //  url('../fonts/JuliSans-Bold.woff2') format('woff2'),
+         url('../fonts/JuliSans-Bold.woff') format('woff'),
+         url('../fonts/JuliSans-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JuliSans';
+    src: url('../fonts/JuliSans-Black.eot');
+    src: url('../fonts/JuliSans-Black.eot?#iefix') format('embedded-opentype'),
+        //  url('../fonts/JuliSans-Black.woff2') format('woff2'),
+         url('../fonts/JuliSans-Black.woff') format('woff'),
+         url('../fonts/JuliSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

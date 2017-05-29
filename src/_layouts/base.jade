@@ -3,6 +3,8 @@ block config
   //- Setup site's base URL to match the "baseUrl" key within `package.json`
   //- Otherwise default to relative pathing
   - var baseUrl = config.baseUrl || './'
+  - var pageType = config.pageType || 'page'
+  - var nameSpace = config.namespace || 'static'
 
 doctype html
 <html class='no-js' lang='en'>
@@ -16,12 +18,15 @@ head
   block stylesheets
     link(rel='stylesheet', href= baseUrl + 'styles/main.css')
 
-body
+body(class=pageType)
   <!--[if lt IE 11]>
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
-  block content
+  .site__navigation
+    include ../_modules/navigation/navigation
+  .site__body#barba-wrapper
+    .barba-container(data-namespace=nameSpace)
+      block content
 
   block scripts
     script(src= baseUrl + 'scripts/main.js')

@@ -1,0 +1,11 @@
+// logo styles
+.logo{
+  display: block;
+  top: $spacing--large;
+  left: $spacing--large;
+  width: 54px;
+  height: 30px;
+  svg{
+    fill:$black;
+  }
+}

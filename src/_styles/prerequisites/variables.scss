@@ -1,0 +1,14 @@
+// spacing
+$spacing--small: 10px;
+$spacing--medium: 20px;
+$spacing--large:60px;
+
+// z-index
+$layer--background: 1;
+$layer--content: 99;
+$layer--overlay: 999;
+$layer--navigation: 1999;
+
+// navigation
+$navigation-height:$spacing--large;
+$global-easeing: cubic-bezier(0, 1, 0.34, 1.01);

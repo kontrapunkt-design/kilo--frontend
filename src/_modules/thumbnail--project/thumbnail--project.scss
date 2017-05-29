@@ -1,0 +1,40 @@
+// thumbnail--project styles
+.thumbnail--project{
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  @include breakpoint(medium up){
+    width: 50%;
+  }
+  a{
+    display: block;
+    width: 100%;
+  }
+  &__content{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: $spacing--medium;
+    max-width: 300px;
+    z-index: $layer--content;
+    .title{
+      color: white;
+      text-transform: uppercase;
+      @extend .lhTight;
+    }
+    .meta{
+      color: white;
+    }
+    .dash{
+      @include dash();
+    }
+  }
+  &__media{
+    z-index: $layer--background;
+    img{
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

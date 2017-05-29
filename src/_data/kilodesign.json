@@ -1,0 +1,27 @@
+[
+  {
+    "site": "kilodesign",
+    "menu": [
+      {
+        "name": "projects",
+        "url": "projects",
+        "overlay": false
+      },
+      {
+        "name": "news",
+        "url": "news",
+        "overlay": false
+      },
+      {
+        "name": "contact",
+        "url": null,
+        "overlay": true
+      },
+      {
+        "name": "about",
+        "url": "about",
+        "overlay": false
+      }
+    ]
+  }
+]

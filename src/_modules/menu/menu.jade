@@ -1,0 +1,9 @@
+-var menu = site.data.kilodesign[0].menu
+div.menu
+  ul.list.menu__list
+    -each menuItem in menu
+      li.list__item.menu__list__item(class=menuItem.name)
+        if menuItem.overlay == false
+          a(href=menuItem.url) #{menuItem.name}
+        else
+          | #{menuItem.name}

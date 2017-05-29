@@ -1,0 +1,23 @@
+// menu styles
+.menu{
+  &__list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    &__item{
+      color: $black;
+      margin-left: $spacing--medium;
+      @extend .meta;
+      font-weight: 600;
+      .top &{
+        color: $white;
+      }
+      a{
+        color: $black;
+        .top &{
+          color: $white;
+        }
+      }
+    }
+  }
+}
