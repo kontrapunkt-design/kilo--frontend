@@ -1,0 +1,64 @@
+[
+  {
+    "col":[
+      {
+        "client":"google",
+        "image": "../images/logo-04.svg"
+      },
+      {
+        "client":"amazon",
+        "image": "../images/logo-05.svg"
+      },
+      {
+        "client":"ebay",
+        "image": "../images/logo-06.svg"
+      },
+      {
+        "client":"microsoft",
+        "image": "../images/logo-04.svg"
+      }
+    ]
+  },
+  {
+    "col":[
+      {
+        "client":"facebook",
+        "image": "../images/logo-06.svg"
+      },
+      {
+        "client":"instagram",
+        "image": "../images/logo-04.svg"
+      },
+      {
+        "client":"snapchat",
+        "image": "../images/logo-05.svg"
+      },
+      {
+        "client":"twitter",
+        "image": "../images/logo-04.svg"
+      }
+
+    ]
+  },
+  {
+    "col":[
+      {
+        "client":"adobe",
+        "image": "../images/logo-05.svg"
+      },
+      {
+        "client":"github",
+        "image": "../images/logo-06.svg"
+      },
+      {
+        "client":"invision",
+        "image": "../images/logo-04.svg"
+      },
+      {
+        "client":"something else",
+        "image": "../images/logo-04.svg"
+      }
+    ]
+  }
+
+]

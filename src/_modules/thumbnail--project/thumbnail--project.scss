@@ -15,9 +15,10 @@
     display: block;
     position: absolute;
     bottom: 0;
-    left: $spacing--medium;
+    left: 0;
     max-width: 300px;
     z-index: $layer--content;
+    @include margin(leftBottom);
     .title{
       color: white;
       text-transform: uppercase;
@@ -25,6 +26,7 @@
     }
     .meta{
       color: white;
+      margin-bottom: 0;
     }
     .dash{
       @include dash();

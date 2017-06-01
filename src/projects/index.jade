@@ -7,9 +7,19 @@ block config
   - var nameSpace = 'projects'
 
 include ../_modules/collection/collection
+include ../_modules/button/button
 
 block content
-  +collection({
-    __class: 'collection collection--projects',
-    data: site.data.projects
-  })
+  .container
+    +collection--projects({
+      __class: 'collection collection--projects',
+      __collectionClass: 'projects',
+      data: site.data.projects
+    })
+  .container.container--bg-02.container--double-padding
+    +button({
+      __class: 'button--load',
+      __id: 'buttonLoadProjects',
+      __text: 'see all projects',
+      __icon: 'icon__arrow'
+      })

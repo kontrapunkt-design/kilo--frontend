@@ -1,19 +1,23 @@
 // Normalize Styles
 @import 'normalize';
-
+@import 'swiper.min';
 
 @import 'settings';
 @import 'foundation';
 @include foundation-everything(true);
 @include foundation-flex-grid;
 
-@import 'prerequisites/prerequisites';
-@import '../_modules/navigation/navigation';
-@import '../_modules/logo/logo';
-@import '../_modules/hero/hero';
-@import '../_modules/menu/menu';
-@import '../_modules/collection/collection';
-@import '../_modules/thumbnail--project/thumbnail--project';
+@import 'prerequisites/prerequisites',
+        '../_modules/navigation/navigation',
+        '../_modules/logo/logo',
+        '../_modules/hero/hero',
+        '../_modules/menu/menu',
+        '../_modules/button/button',
+        '../_modules/collection/collection',
+        '../_modules/thumbnail--project/thumbnail--project',
+        '../_modules/thumbnail--news/thumbnail--news',
+        '../_modules/paragraph/paragraph',
+        '../_modules/multi-col-slider/multi-col-slider';
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements

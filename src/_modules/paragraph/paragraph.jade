@@ -1,0 +1,10 @@
+mixin paragraph(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.data = spec.data || ''
+
+  div.paragraph(class=spec.__class)
+    div.paragraph__title
+      h4.title.black #{spec.data.title}
+    div.paragraph__content
+      p.text #{spec.data.content}

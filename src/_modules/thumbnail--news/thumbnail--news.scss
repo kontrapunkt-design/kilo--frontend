@@ -1,0 +1,20 @@
+// thumbnail--news styles
+.thumbnail--news{
+  display: flex;
+  // background-color: $background-color-01;
+  a{
+    display: block;
+    width: 100%;
+    color: $black;
+  }
+  &__content{
+    width: auto;
+    margin: $spacing--large;
+    .dash{
+      @include dash(5px, 30px, $black);
+    }
+  }
+  &__media{
+
+  }
+}

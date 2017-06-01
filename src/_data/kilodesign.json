@@ -1,6 +1,14 @@
 [
   {
     "site": "kilodesign",
+    "description": {
+      "title": "versatile design innovation",
+      "content": "From startups to major corporations, Kilo is internationally recognized for delivering aesthetically sustainable and lasting design innovation for leading-edge clients, irrespective of size. We are decidedly non-specialized when it comes to market sectors, and many clients choose us for that reason alone when they need fresh perspectives and alternative takes on their brands and markets."
+    },
+    "founder": {
+      "title": "Lars Larsen",
+      "content": "Known as an industrial designer with a straightforward approach to design who merges differing elements of contemporary culture – from fine art and street culture to his strong fascination for the workshop. Lars’s natural eye for blatant and simple solutions to complex design problems has earned him several, high-profile, creative awards, such as The Danish Design Prize and a Cannes Lions as well as inclusion in SFMOMA’s permanent collection, leading to a position among Scandinavian design’s most trusted authorities. Outside of his design work, Lars Larsen is a member of the Danish Design Council and a respected design jury capacity who appears in award juries such as D&AD, Core77 and Cannes Lions."
+    },
     "menu": [
       {
         "name": "projects",

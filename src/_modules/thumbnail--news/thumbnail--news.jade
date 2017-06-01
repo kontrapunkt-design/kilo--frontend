@@ -1,0 +1,15 @@
+mixin thumbnail--news(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  div.thumbnail.thumbnail--news(class=spec.__class)
+    a(href="#")
+      .row.row--fullscreen.collapse
+        .small-12.medium-6.column
+          .thumbnail--news__content
+            span.dash
+            h3.title.bold #{item.title}
+            p.meta #{item.date}
+            p.teaser #{item.teaser}
+        .small-12.medium-6.column
+          .thumbnail--news__media
+            img(src=item.thumbnail)

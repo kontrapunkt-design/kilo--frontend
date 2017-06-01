@@ -1,6 +1,7 @@
 'use strict';
 import Isotope from 'isotope-layout';
-
+import imagesLoaded from 'imagesloaded';
+import {projectsLoad} from '../../_scripts/globalAnimations';
 
 export default class Collection {
   constructor() {
@@ -8,16 +9,25 @@ export default class Collection {
     console.log('%s module', this.name.toLowerCase());
     let projects = document.querySelector('.collection--projects .projects');
     let project = '.collection--projects .projects .thumbnail--project';
+    let projectImgLoad = new imagesLoaded(projects);
+
+    let layoutOptions = {
+      itemSelector: project,
+      percentPosition: true,
+      masonry: {
+        columnWidth: project
+      }
+    }
+
+    let projectsLayout = new Isotope(projects);
 
     let _init = (()=>{
-      let projectsLayout = new Isotope(projects, {
-        itemSelector: project,
-        percentPosition: true,
-        masonry: {
-          columnWidth: project
-        }
+      projectImgLoad.on('done', ()=>{
+        projectsLayout.layout(layoutOptions);
+        projectsLoad().animation.play();
       })
     })();
+
 
   }
 }

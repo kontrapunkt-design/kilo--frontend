@@ -1,0 +1,38 @@
+extends ../_layouts/base
+
+block config
+  - var baseUrl = '../'
+  - var pageType = 'page-about'
+  - var nameSpace = 'about'
+  - var siteDescription = site.data.kilodesign[0].description
+  - var founder = site.data.kilodesign[0].founder
+
+//- include _modules/link/link
+include ../_modules/hero/hero
+include ../_modules/multi-col-slider/multi-col-slider
+include ../_modules/paragraph/paragraph
+
+block content
+  .container
+    +hero({
+      __video: 'hero--02',
+      __statment: 'Headed and founded by award-winning designer, Lars Larsen, Kilo is an idea-driven, industrial design studio established in 2005, which holds a position among Scandinavia’s most influential design studios.'
+      })
+  .container.container--bg-01.container--double-padding
+    +multi-col-slider({
+      data: site.data.clients
+      })
+  .container.container--double-padding
+    .row
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: siteDescription
+          })
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: founder
+          })
+  .container.container--bg-02.container--double-padding
+    +multi-col-slider({
+      data: site.data.awards
+      })

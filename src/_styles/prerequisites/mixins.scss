@@ -1,6 +1,6 @@
 @mixin dash(
-  $height:8px,
-  $width:50px,
+  $height:5px,
+  $width:30px,
   $bg:#ffffff
 )
 {
@@ -11,7 +11,38 @@
   margin-bottom: $spacing--small;
   background-color: $bg;
 }
-
+@mixin margin($position: left) {
+  @if $position == left{
+    margin-left: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+    }
+  }
+  @else if $position == right{
+    margin-right: $spacing--small;
+    @include breakpoint(medium){
+      margin-right: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-right: $spacing--large;
+    }
+  }
+  @else if $position == leftBottom{
+    margin-left: $spacing--small;
+    margin-bottom: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+      margin-bottom: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+      margin-bottom: $spacing--large;
+    }
+  }
+}
 
 @mixin overlay($background-color:rgba($black, 0.8)){
   display: none;

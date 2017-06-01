@@ -1,0 +1,25 @@
+// button styles
+.button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  &:focus{
+    outline: none;
+  }
+}
+.button--load{
+  @include margin(left);
+  &__text{
+    color: white;
+    margin-right: $spacing--small;
+    @extend .meta;
+  }
+  &__icon{
+    svg{
+      width: 24px;
+      height: 14px;
+      fill: $white;
+    }
+  }
+}

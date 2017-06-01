@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
   float: left;
+  background-color: $white;
 }
 .site__footer{
 }
@@ -33,11 +34,19 @@
 }
 .container{
   display: block;
+  background-color: $white;
   &--fullscreen{
   }
   &--double-padding-top{
   }
   &--double-padding{
+    padding: $spacing--large*2 0;
+  }
+  &--bg-01{
+    background-color: $background-color-01;
+  }
+  &--bg-02{
+    background-color: $background-color-02;
   }
   &--primary{
   }

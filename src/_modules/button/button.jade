@@ -1,0 +1,12 @@
+mixin button(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.__id = spec.__id || ''
+  - spec.__text = spec.__text || ''
+  - spec.__icon = spec.__icon || ''
+
+  button.button(class=spec.__class id=spec.__id)
+    span.button__text.heavey(class=spec.__class + "__text") #{spec.__text}
+    span.button__icon(class=spec.__class + "__icon")
+      svg
+        use(xlink:href= baseUrl +"images/svg-sprite.svg#" + spec.__icon)

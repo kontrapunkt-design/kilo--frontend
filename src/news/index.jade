@@ -1,0 +1,15 @@
+extends ../_layouts/base
+
+block config
+  - var baseUrl = '../'
+  - var pageType = 'page-news'
+  - var nameSpace = 'news'
+
+include ../_modules/collection/collection
+
+block content
+  +collection--news({
+    __class: 'collection collection--news',
+    __collectionClass: 'news',
+    data: site.data.news
+  })

@@ -2,6 +2,7 @@
 .collection{
   &--projects{
     .projects{
+      opacity: 0; // hide element before loaded
       width: 100%;
     }
   }

@@ -5,4 +5,9 @@
         <path id="mouse__knot" d="M10,8 L10,11" stroke-linecap="round"></path>
     </g>
   </symbol>
+  <symbol id="icon__arrow" viewBox="0 0 24 14">
+    <polygon points="16.6944145 14.9208092 23.7654823 7.84974136 22.3512688 6.4355278 15.280201 13.5065956"></polygon>
+    <polygon points="23.6815587 8.04803608 16.6104909 0.976968263 15.1962774 2.39118183 22.2673452 9.46224964"></polygon>
+    <polygon points="0 7 21 7 21 9 0 9"></polygon>
+  </symbol>
 </svg>

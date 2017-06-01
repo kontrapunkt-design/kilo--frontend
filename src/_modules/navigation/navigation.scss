@@ -1,6 +1,6 @@
 // navigation styles
 .navigation{
-  padding:$spacing--medium 0;
+  padding:$spacing--medium*1.5 0 $spacing--medium;
   background-color: rgba($white, 0.95);
   opacity: 1;
   transform: translateY(0);
@@ -14,5 +14,15 @@
   }
   &.top{
     background-color: transparent;
+  }
+  &__dash{
+    @include dash();
+    position: absolute;
+    top: 0;
+    z-index: $layer--navigation + 1;
+    transform-origin: center left;
+    .top &{
+      background-color: $white;
+    }
   }
 }

@@ -1,5 +1,6 @@
 // menu styles
 .menu{
+  @include margin(right);
   &__list{
     display: flex;
     list-style: none;

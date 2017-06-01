@@ -1,0 +1,14 @@
+// paragraph styles
+.paragraph{
+  &__title{
+    width: 100%;
+    text-transform: uppercase;
+    @extend .lhTight;
+    @include breakpoint(medium up){
+      width: 50%;
+    }
+  }
+  &__content{
+
+  }
+}

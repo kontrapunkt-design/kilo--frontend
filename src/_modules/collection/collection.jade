@@ -1,10 +1,35 @@
-mixin collection(spec)
+mixin collection--projects(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.__collectionClass = spec.__collectionClass || ''
+  - spec.data = spec.data || ''
+  div(class=spec.__class)
+    div(class=spec.__collectionClass)
+      - each item in spec.data
+        if item.featured == true
+          include ../thumbnail--project/thumbnail--project
+          +thumbnail--project
+  
+mixin collection--projects-archive(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.__collectionClass = spec.__collectionClass || ''
+  - spec.data = spec.data || ''
+  div(class=spec.__class)
+    div(class=spec.__collectionClass)
+      - each item in spec.data
+          include ../thumbnail--project/thumbnail--project
+          +thumbnail--project
+
+
+mixin collection--news(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.__collectionClass = spec.__collectionClass || ''
   - spec.data = spec.data || ''
 
   div(class=spec.__class)
-    .projects
+    div(class=spec.__collectionClass)
       - each item in spec.data
-        include ../thumbnail--project/thumbnail--project
-        +thumbnail--project
+        include ../thumbnail--news/thumbnail--news
+        +thumbnail--news

@@ -1,0 +1,14 @@
+mixin multi-col-slider(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.data = spec.data || ''
+
+  div.multi-col-slider(class=spec.__class)
+    .row
+      - each col in spec.data
+        .small-12.medium-4.column
+          .swiper-container
+            ul.list.swiper-wrapper
+              - each item in col.col
+                li.list__item.swiper-slide
+                  img(src=baseUrl + item.image)
