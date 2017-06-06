@@ -21,6 +21,18 @@
       margin-left: $spacing--large;
     }
   }
+  @else if $position == leftTop{
+    margin-left: $spacing--small;
+    margin-top: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+      margin-top: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+      margin-top: $spacing--large;
+    }
+  }
   @else if $position == right{
     margin-right: $spacing--small;
     @include breakpoint(medium){

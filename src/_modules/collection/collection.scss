@@ -1,9 +1,14 @@
 // collection styles
 .collection{
   &--projects{
+    opacity: 0;
     .projects{
       opacity: 0; // hide element before loaded
       width: 100%;
+      overflow: hidden;
+      .archive{
+        opacity: 0;
+      }
     }
   }
 }

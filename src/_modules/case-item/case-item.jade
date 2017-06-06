@@ -1,0 +1,35 @@
+mixin case-item(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.imgUrl = spec.imgUrl
+
+  div.case-item(class=spec.__class)&attributes(attributes)
+    .case-item__media
+      .image
+        img(src=baseUrl + spec.imgUrl)
+
+mixin case-item__quote(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.quote = spec.quote
+  - spec.cite = spec.cite
+  - spec.link = spec.link
+  - spec.backgroundColor = spec.backgroundColor
+
+  div.case-item(class=spec.__class style='background-color:#{spec.backgroundColor}')&attributes(attributes)
+    .case-item__quote
+      blockquote
+        p "#{spec.quote}"
+        .dash
+        footer
+          a(href=spec.link) #{spec.cite}
+
+mixin case-item__embedMedia(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.embedMedia = spec.embedMedia
+
+  div.case-item(class=spec.__class)&attributes(attributes)
+    .case-item__media
+      .embedMedia.responsive-embed
+        iframe(src=spec.embedMedia frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen)

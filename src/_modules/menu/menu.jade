@@ -4,6 +4,6 @@ div.menu
     -each menuItem in menu
       li.list__item.menu__list__item(class=menuItem.name)
         if menuItem.overlay == false
-          a(href=baseUrl + menuItem.url) #{menuItem.name}
+          a.menu__list__item__target(href=baseUrl + menuItem.url ) #{menuItem.name}
         else
           | #{menuItem.name}

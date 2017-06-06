@@ -12,6 +12,11 @@
   background-color: $white;
 }
 .site__footer{
+  display: block;
+  position: relative;
+  width: 100%;
+  float: left;
+  background-color: $black;
 }
 .menu--opened{
   overflow: hidden;
@@ -35,6 +40,8 @@
 .container{
   display: block;
   background-color: $white;
+  position: relative;
+  overflow: hidden;
   &--fullscreen{
   }
   &--double-padding-top{
@@ -47,6 +54,11 @@
   }
   &--bg-02{
     background-color: $background-color-02;
+  }
+  &--load{
+    height: $spacing--large*2;
+    display: flex;
+    align-items: center;
   }
   &--primary{
   }
@@ -67,4 +79,7 @@
     width: 100%;
     height: 100%;
   }
+}
+.responsive-embed{
+  margin-bottom: 0;
 }

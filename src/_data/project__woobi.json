@@ -1,0 +1,44 @@
+[
+  {
+    "caseHero": {
+      "title": "WOOBI",
+      "image": "images/WOOBI.jpg",
+      "featured": true,
+      "bgColor": "#F8DB02",
+      "usp": "Woobi Play is an anti-pollution mask for children that filters at least 95% of dangerous airborne particulate matter (PM).",
+      "description": "The mask is designed to meet children at eye-level, with a playful, educational approach, and is a bold shot at designing a simple, new typology that transforms a professional mask to fit into a child’s universe.\nThe mask, suitable for kids from 6 years of age, comes disassembled with an educational manual. Woobi’s modular system encourages kids and parents to put the parts together, piece by piece, to build the finished product. The interaction helps them to understand the product’s functionality and introduces a dialogue on pollution and protection.The different coloured parts act as a simplifying tool for communication around the product’s functionality and allow kids to customize the mask the way they like it, giving them a sense of ownership and autonomy over their own safety.\nWoobi Play uses an approved and certified micro high-efficiency particulate arrestance (HEPA) filter, which is positioned at the side of the mask. Compared to more traditional masks on the market which typically hide the face, Woobi’s asymmetric design DNA and its translucent, medical-grade silicone structure aims to achieve effective protection while remaining sensitive to the social needs of its users."
+    },
+    "metaInfo": {
+      "Design": "kilo",
+      "Year": "2017",
+      "Brand": "WOOBI",
+      "Status": "in stores"
+    },
+    "sectionTitle": "A playful, educational approach",
+    "secImg": "images/woobi/WOOBI-PLAY_WEB-01.jpg",
+    "sideImg": "images/woobi/pattern.jpg",
+    "caseItems": [
+      {
+        "imageUrl": "images/woobi/WOOBI-PLAY_WEB-02.jpg",
+        "embedMedia": ""
+      },
+      {
+        "imageUrl": "images/woobi/WOOBI-PLAY_WEB-03.jpg",
+        "embedMedia": ""
+      },
+      {
+        "quote": "A high-quality design solution, Woobi Play should be applauded for showing awareness of the importance of making facial expressions visible through the transparent material.",
+        "cite": "Lars Larsen",
+        "link": "https://www.dezeen.com/2017/03/13/kilo-design-woobi-play-air-pollution-mask-protects-children-health-products/"
+      },
+      {
+        "imageUrl": "images/woobi/WOOBI-PLAY_WEB-05.jpg",
+        "embedMedia": ""
+      },
+      {
+        "imageUrl": "",
+        "embedMedia": "https://player.vimeo.com/video/207615458"
+      }
+    ]
+  }
+]

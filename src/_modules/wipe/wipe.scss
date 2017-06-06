@@ -1,0 +1,36 @@
+// wipe styles
+.wipe{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: $layer--overlay + 99;
+  position: relative;
+  transform: translateX(0);
+  transform-origin: top left;
+  background-color: $white;
+  z-index: $layer--overlay + 99;
+  &__loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    &__text{
+      @extend h3;
+      font-weight: 800;
+      color: $black;
+      margin: 0;
+    }
+    &__dash{
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 150px;
+      height: 40px;
+      background-color: $black;
+      transform-origin: center right;
+    }
+  }
+}

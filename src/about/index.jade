@@ -5,7 +5,8 @@ block config
   - var pageType = 'page-about'
   - var nameSpace = 'about'
   - var siteDescription = site.data.kilodesign[0].description
-  - var founder = site.data.kilodesign[0].founder
+  - var clients = site.data.kilodesign[0].clients
+  - var collaboration = site.data.kilodesign[0].collaboration
 
 //- include _modules/link/link
 include ../_modules/hero/hero
@@ -30,7 +31,11 @@ block content
           })
       .small-12.medium-6.large-4.column
         +paragraph({
-          data: founder
+          data: clients
+          })
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: collaboration
           })
   .container.container--bg-02.container--double-padding
     +multi-col-slider({

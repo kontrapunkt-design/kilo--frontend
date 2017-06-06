@@ -1,0 +1,26 @@
+mixin footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.data = spec.data
+
+  div.footer(class=spec.__class)&attributes(attributes)
+    .row.align-justify
+      .small-12.medium-3.column
+        .address
+          p.street #{spec.data.contact.address.street}
+          p.city #{spec.data.contact.address.postCode} #{spec.data.contact.address.city}
+          p.country #{spec.data.contact.address.country}
+      .small-12.medium-3.column
+      .small-12.medium-4.column
+        ul.emails.list
+          - for item in spec.data.contact.emails
+            li.list-item.email
+              a(href="mailto:") #{item.email}
+        ul.social-media.list
+          - for sm in spec.data.socialMedia
+            li.list-item
+              a(href=sm.link target='_blank')
+                //- span.title #{sm.name}
+                span.icon
+                  svg
+                    use(xlink:href= baseUrl +"images/svg-sprite.svg#"+sm.icon)

@@ -1,11 +1,14 @@
 mixin thumbnail--project(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.href = spec.href || ''
+  - spec.data__color = spec.data__color || ''
   div.thumbnail.thumbnail--project(class=spec.__class)
-    a(href="#")
+    a.thumbnail--project__target(href=baseUrl+item.href data-bgColor=item.bgColor)
       .thumbnail--project__content
         span.dash
         h3.title.bold #{item.title}
         p.meta #{item.client} / #{item.releaseYear}
+      .overlay(style='background-color:#{item.bgColor}')
       .thumbnail--project__media
-        img(src=item.thumbnail)
+        img(src=baseUrl + item.thumbnail)

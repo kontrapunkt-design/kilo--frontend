@@ -1,0 +1,19 @@
+// project__meta-info styles
+.project__meta-info{
+  background-color: lighten($black, 5%);
+  padding: $spacing--large 0;
+  .meta-info{
+    @include margin(left);
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    .meta{
+      color: $white;
+      margin-right: $spacing--large;
+      span{
+        display: block;
+      }
+    }
+  }
+}

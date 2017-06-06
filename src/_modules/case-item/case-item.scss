@@ -1,0 +1,41 @@
+// case-item styles
+.case-item{
+  &__media{
+    img{
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__quote{
+    padding: $spacing--large*2 0;
+    blockquote{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    p{
+      @extend h2;
+      color: $white;
+      font-weight: 900;
+      width: 100%;
+      max-width: 47rem;
+      margin: auto;
+      line-height: 1.5em;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .dash{
+      @include dash();
+      margin: $spacing--small auto;
+    }
+    footer{
+      @extend .meta;
+      text-align: center;
+      a{
+        color: $white;
+        font-weight: 900;
+      }
+    }
+  }
+}

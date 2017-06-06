@@ -1,0 +1,56 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var project = site.data.project__woobi[0]
+  - var baseUrl = '../'
+  - var pageType = 'page-project'
+  - var nameSpace = 'project'
+
+include ../_modules/hero--project/hero--project
+include ../_modules/project__section/project__section
+include ../_modules/project__meta-info/project__meta-info
+include ../_modules/case-item/case-item
+
+block content
+  .container
+    +hero--project({
+      __class: '',
+      title: project.caseHero.title,
+      usp: project.caseHero.usp,
+      backgroundColor: project.caseHero.bgColor,
+      heroImg: baseUrl + project.caseHero.image,  
+    })
+    +case-item({
+      imgUrl: baseUrl + project.secImg
+      })
+  .container
+    +project__section({
+      __class: 'project__section--sideImg',
+      sectionTitle: project.sectionTitle,
+      metaInfo: project.metaInfo,
+      backgroundColor: project.caseHero.bgColor,
+      sideImg: baseUrl + project.sideImg,  
+      description : project.caseHero.description
+    })
+  .container
+    - each caseItem in project.caseItems
+      if caseItem.imageUrl
+        +case-item({
+          imgUrl: baseUrl + caseItem.imageUrl
+        })
+      else if caseItem.quote
+        +case-item__quote({
+          quote:caseItem.quote,
+          cite:caseItem.cite,
+          link:caseItem.link,
+          backgroundColor: project.caseHero.bgColor
+        })
+      else if caseItem.embedMedia
+        +case-item__embedMedia({
+          embedMedia: caseItem.embedMedia
+        })
+  .container
+    +project__meta-info({
+      metaInfo: project.metaInfo
+      })

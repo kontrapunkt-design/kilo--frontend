@@ -1,0 +1,28 @@
+// loading styles
+.loading{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: $layer--background;
+  &__bar{
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height:$spacing--large*2;
+    background-color: $white;
+    z-index: $layer--content;
+  }
+  &__text{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-120%,-50%,0);
+    color: $black;
+    @extend h5;
+    z-index: $layer--content + 1;
+  }
+}

@@ -2,12 +2,16 @@
   {
     "site": "kilodesign",
     "description": {
-      "title": "versatile design innovation",
-      "content": "From startups to major corporations, Kilo is internationally recognized for delivering aesthetically sustainable and lasting design innovation for leading-edge clients, irrespective of size. We are decidedly non-specialized when it comes to market sectors, and many clients choose us for that reason alone when they need fresh perspectives and alternative takes on their brands and markets."
+      "title": "Kilo",
+      "content": "Headed and founded by award-winning designer, Lars Larsen, Kilo is a Copenhagen based idea-driven industrial design studio established in 2005 and today among Scandinavia’s most influential. At the cross-section between technology and culture, Kilo designs with a holistic approach merging innovation and strategi in search for improved solutions for the future"
     },
-    "founder": {
-      "title": "Lars Larsen",
-      "content": "Known as an industrial designer with a straightforward approach to design who merges differing elements of contemporary culture – from fine art and street culture to his strong fascination for the workshop. Lars’s natural eye for blatant and simple solutions to complex design problems has earned him several, high-profile, creative awards, such as The Danish Design Prize and a Cannes Lions as well as inclusion in SFMOMA’s permanent collection, leading to a position among Scandinavian design’s most trusted authorities. Outside of his design work, Lars Larsen is a member of the Danish Design Council and a respected design jury capacity who appears in award juries such as D&AD, Core77 and Cannes Lions."
+    "clients": {
+      "title": "Clients",
+      "content": "From startups to major corporations, Kilo is internationally recognized for delivering bold and lasting design innovation for leading-edge clients, irrespective of size. Non-specialized when it comes to market sectors, many clients choose us for that reason alone when they need fresh perspectives and alternative takes on their brands and markets."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "content": "For more than a decade we have brought lasting design solutions to life in close collaboration with ambitious clients. We have received a line of international honors and awards in our quest of shaping and improving the world surrounding us. We believe great work is born from collaboration and a shared ambition to design for change."
     },
     "menu": [
       {
@@ -21,14 +25,44 @@
         "overlay": false
       },
       {
-        "name": "contact",
-        "url": null,
-        "overlay": true
-      },
-      {
         "name": "about",
         "url": "about",
         "overlay": false
+      }
+    ],
+    "contact": {
+      "address":{
+        "street":"Kløverbladsgade 56",
+        "city": "Valby",
+        "postCode": "2500",
+        "country": "Denmark"
+      },
+      "emails": [
+        {"email": "careers@kilodesign.dk"},
+        {"email": "info@kilodesign.dk"}
+      ],
+      "phones": "+4561301804"
+    },
+    "socialMedia": [
+      {
+        "name": "facebook",
+        "icon": "icon__facebook",
+        "link": "http://www.facebook.com"
+      },
+      {
+        "name": "linkedin",
+        "icon": "icon__linkedin",
+        "link": "http://www.linkedin.com"
+      },
+      {
+        "name": "twitter",
+        "icon": "icon__twitter",
+        "link": "http://www.twitter.com"
+      },
+      {
+        "name": "instagram",
+        "icon": "icon__instagram",
+        "link": "http://www.instagram.com"
       }
     ]
   }

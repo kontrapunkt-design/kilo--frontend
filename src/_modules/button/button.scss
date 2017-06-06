@@ -10,6 +10,7 @@
 }
 .button--load{
   @include margin(left);
+  z-index: $layer--content;
   &__text{
     color: white;
     margin-right: $spacing--small;

@@ -7,6 +7,7 @@ block config
   - var nameSpace = 'projects'
 
 include ../_modules/collection/collection
+include ../_modules/loading/loading
 include ../_modules/button/button
 
 block content
@@ -16,10 +17,11 @@ block content
       __collectionClass: 'projects',
       data: site.data.projects
     })
-  .container.container--bg-02.container--double-padding
+  .container.container--load.container--bg-02
     +button({
       __class: 'button--load',
       __id: 'buttonLoadProjects',
       __text: 'see all projects',
       __icon: 'icon__arrow'
       })
+    +loading

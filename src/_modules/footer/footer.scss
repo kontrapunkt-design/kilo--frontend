@@ -1,0 +1,45 @@
+// footer styles
+.footer{
+  padding:$spacing--large 0 $spacing--medium;
+}
+.address{
+  color:  $white;
+  p{
+    margin: 0;
+  }
+}
+.emails{
+  display: flex;
+  flex-direction: column;
+  flex-direction: flex-end;
+  align-items: flex-end;
+  margin-left: 0;
+  li{
+    a{
+      color: $white;
+      font-weight: 500;
+    }
+  }
+}
+.social-media{
+  margin-left: 0;
+  margin-bottom: $spacing--medium*1.25;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  .list-item{
+    margin-left: $spacing--medium;
+    .title{
+
+    }
+    .icon{
+      display: block;
+      width: $ic-sz--s;
+      height: $ic-sz--s;
+      svg{
+        fill: $white;
+      }
+    }
+  }
+}

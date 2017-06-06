@@ -1,0 +1,7 @@
+mixin loading(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.loading(class=spec.__class)&attributes(attributes)
+    span.loading__text.bold
+    span.loading__bar

@@ -3,406 +3,477 @@
     "title": "WOOBI",
     "client": "AIRMOTION LABORATORIES",
     "releaseYear": "2017",
-    "thumbnail": "../images/WOOBI.jpg",
+    "thumbnail": "images/WOOBI.jpg",
+    "href": "woobi",
+    "bgColor": "#F8DB02",
     "featured": true
   },
   {
-    "title": "Carlsberg green fiber bottle",
+    "title": "Carlsberg Green Fiber Bottle",
     "client": "Carlsberg",
     "releaseYear": "2016",
-    "thumbnail": "../images/Carlsberg.jpg",
+    "thumbnail": "images/Carlsberg.jpg",
+    "href": "carlsberg-green-fiber-bottle",
+    "bgColor": "#014425",
     "featured": true
   },
   {
     "title": "Analog Drive",
     "client": "ELEKTRON",
     "releaseYear": "2016",
-    "thumbnail": "../images/AnalogDrive.jpg",
+    "thumbnail": "images/AnalogDrive.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": true
   },
   {
     "title": "NEO",
     "client": "REELIGHT",
     "releaseYear": "2016",
-    "thumbnail": "../images/Neo.jpg",
+    "thumbnail": "images/Neo.jpg",
+    "href": "woobi",
+    "bgColor": "#ee7e21",
     "featured": true
   },
   {
     "title": "UGO",
     "client": "REELIGHT",
     "releaseYear": "2016",
-    "thumbnail": "../images/UGO.jpg",
+    "bgColor": "#c8d4d6",
+    "thumbnail": "images/UGO.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "TMA-2 Smart Headband – H05",
     "client": "AiAiAi",
     "releaseYear": "2016",
-    "thumbnail": "../images/H05.jpg",
+    "bgColor": "#cfcbc4",
+    "thumbnail": "images/H05.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "ERNIT",
     "client": "ERNIT",
     "releaseYear": "2017",
-    "thumbnail": "../images/Ernit.jpg",
+    "thumbnail": "images/Ernit.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "OTO",
     "client": "EAST JAPAN PROJECT",
     "releaseYear": "2016",
-    "thumbnail": "../images/OTO.jpg",
+    "thumbnail": "images/OTO.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "OBLONG",
     "client": "BULBUL",
     "releaseYear": "2016",
-    "thumbnail": "../images/OBLONG.jpg",
+    "thumbnail": "images/Oblong.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "Forfatterhuset",
     "client": "COBE",
     "releaseYear": "2016",
-    "thumbnail": "../images/Forfatterhuset.jpg",
+    "thumbnail": "images/Forfatterhuset.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "VIA57™ CHAIR",
     "client": "FRITZ HANSEN",
     "releaseYear": "2016",
-    "thumbnail": "../images/VIA57.jpg",
+    "thumbnail": "images/VIA57.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "BEND",
     "client": "WATT A LAMP",
     "releaseYear": "2016",
-    "thumbnail": "../images/BEND.jpg",
+    "thumbnail": "images/BEND.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "Ø – A MODULAR BENCH SYSTEM",
     "client": "+HALLE",
     "releaseYear": "2015",
-    "thumbnail": "../images/oeBench.jpg",
+    "thumbnail": "images/oeBench.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "ORE",
     "client": "BULBUL",
     "releaseYear": "2015",
-    "thumbnail": "../images/ORE.jpg",
+    "thumbnail": "images/ORE.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "Hualien Residences Furniture collection",
     "client": "COBE",
     "releaseYear": "2015",
-    "thumbnail": "../images/HualienResidences.jpg",
+    "thumbnail": "images/HualienResidences.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "OKO",
     "client": "BIOMEGA",
     "releaseYear": "2015",
-    "thumbnail": "../images/OKO.jpg",
+    "thumbnail": "images/OKO.jpg",
+    "href": "woobi",
     "featured": true
   },
   {
     "title": "Bus stops",
     "client": "SKÅNETRAFIKEN",
     "releaseYear": "2015",
-    "thumbnail": "../images/BusStops.jpg",
+    "thumbnail": "images/BusStops.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "TMA-2 Modular",
     "client": "AiAiAi",
     "releaseYear": "2015",
-    "thumbnail": "../images/TMA-2.jpg",
+    "thumbnail": "images/TMA-2.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Silverback suspended",
     "client": "LOUIS POULSEN",
     "releaseYear": "2015",
-    "thumbnail": "../images/SilverbackSuspended.jpg",
+    "thumbnail": "images/SilverbackSuspended.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TAPER™ collection",
     "client": "KALLISTA",
     "releaseYear": "2015",
-    "thumbnail": "../images/Taper.jpg",
+    "thumbnail": "images/Taper.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TMA-2 Modular Packaging System",
     "client": "AiAiAi",
     "releaseYear": "2015",
-    "thumbnail": "../images/AiaiaiPackaging.jpg",
+    "thumbnail": "images/AiaiaiPackaging.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Morse code bench for Danish Maritime Museum",
     "client": "BIG",
     "releaseYear": "2013",
-    "thumbnail": "../images/MorseCodeBench.jpg",
+    "thumbnail": "images/MorseCodeBench.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "FACETTE",
     "client": "BULBUL",
     "releaseYear": "2015",
-    "thumbnail": "../images/Facette.jpg",
+    "thumbnail": "images/Facette.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "PEK BEIJING",
     "client": "BIOMEGA",
     "releaseYear": "2015",
-    "thumbnail": "../images/PEKBeijing.jpg",
+    "thumbnail": "images/PEKBeijing.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TAC – BIG Cities",
     "client": "ROSENTHAL",
     "releaseYear": "2014",
-    "thumbnail": "../images/Tac.jpg",
+    "thumbnail": "images/Tac.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Llama",
     "client": "COFOCO",
     "releaseYear": "2014",
-    "thumbnail": "../images/Llama.jpg",
+    "thumbnail": "images/Llama.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "PEBBLE",
     "client": "BULBUL",
     "releaseYear": "2013",
-    "thumbnail": "../images/pebble.jpg",
+    "thumbnail": "images/pebble.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "OKO",
     "client": "BIOMEGA",
     "releaseYear": "2012",
-    "thumbnail": "../images/OKOOri.jpg",
+    "thumbnail": "images/OKOOri.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "ROULADE",
     "client": "VERSUS",
     "releaseYear": "2012",
-    "thumbnail": "../images/Roulade.jpg",
+    "thumbnail": "images/Roulade.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "SHANGHAY CHAIR / WOODWOOD",
     "client": "HAY",
     "releaseYear": "2010",
-    "thumbnail": "../images/ShanghayChair.jpg",
+    "thumbnail": "images/ShanghayChair.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "XTABLE",
     "client": "HOLMRIS",
     "releaseYear": "2012",
-    "thumbnail": "../images/Xtable.jpg",
+    "thumbnail": "images/Xtable.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "SCOOP",
     "client": "+HALLE",
     "releaseYear": "2013",
-    "thumbnail": "../images/scoop.jpg",
+    "thumbnail": "images/scoop.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TRACKS",
     "client": "AiAiAi",
     "releaseYear": "2009",
-    "thumbnail": "../images/Tracks.jpg",
+    "thumbnail": "images/Tracks.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "WEIGHT HERE",
     "client": "Menu",
     "releaseYear": "2013",
-    "thumbnail": "../images/weight.jpg",
+    "thumbnail": "images/weight.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "SWIRL",
     "client": "AiAiAi",
     "releaseYear": "2008",
-    "thumbnail": "../images/swirl.jpg",
+    "thumbnail": "images/swirl.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Street",
     "client": "GDB",
     "releaseYear": "2012",
-    "thumbnail": "../images/street.jpg",
+    "thumbnail": "images/street.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "SLICE",
     "client": "&TRADITION",
     "releaseYear": "2012",
-    "thumbnail": "../images/slice.jpg",
+    "thumbnail": "images/slice.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "SILVERBACK",
     "client": "LOUIS POULSEN",
     "releaseYear": "2012",
-    "thumbnail": "../images/Silverback.jpg",
+    "thumbnail": "images/Silverback.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TMA -1",
     "client": "AiAiAi",
     "releaseYear": "2009",
-    "thumbnail": "../images/tma1.jpg",
+    "thumbnail": "images/tma1.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "PUMA BIKE SERIES",
     "client": "PUMA",
     "releaseYear": "2009",
-    "thumbnail": "../images/PumaBike.jpg",
+    "thumbnail": "images/PumaBike.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "NYC",
     "client": "BIOMEGA",
     "releaseYear": "2010",
-    "thumbnail": "../images/NYC.jpg",
+    "thumbnail": "images/NYC.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TUBECHAIR",
     "client": "HAY",
     "releaseYear": "2010",
-    "thumbnail": "../images/TubeChiar.jpg",
+    "thumbnail": "images/TubeChiar.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "CAPITAL",
     "client": "AiAiAi",
     "releaseYear": "2012",
-    "thumbnail": "../images/Capital.jpg",
+    "thumbnail": "images/Capital.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "Turn Around",
     "client": "MUUTO",
     "releaseYear": "2011",
-    "thumbnail": "../images/TurnAround.jpg",
+    "thumbnail": "images/TurnAround.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "BRICK",
     "client": "VERSUS",
     "releaseYear": "2010",
-    "thumbnail": "../images/brick.jpg",
+    "thumbnail": "images/brick.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "Bulb Fiction",
     "client": "LIGHTYEARS",
     "releaseYear": "2012",
-    "thumbnail": "../images/BulbFiction.jpg",
+    "thumbnail": "images/BulbFiction.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "CBSS",
     "client": "Kilo",
     "releaseYear": "2009",
-    "thumbnail": "../images/CBBS.jpg",
+    "thumbnail": "images/CBBS.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "BUNCH OF BULBS",
     "client": "Kilo",
     "releaseYear": "2005",
-    "thumbnail": "../images/BunchOfBulbs.jpg",
+    "thumbnail": "images/BunchOfBulbs.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "iFlash One",
     "client": "REELIGHT",
     "releaseYear": "2012",
-    "thumbnail": "../images/iflashOne.jpg",
+    "thumbnail": "images/iflashOne.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Shanghay Chair",
     "client": "HAY",
     "releaseYear": "2009",
-    "thumbnail": "../images/ShanghaiChair-01.jpg",
+    "thumbnail": "images/ShanghaiChair-01.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TMA-1 X",
     "client": "AiAiAi",
     "releaseYear": "2013",
-    "thumbnail": "../images/tma1x.jpg",
+    "thumbnail": "images/tma1x.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Pipe",
     "client": "AiAiAi",
     "releaseYear": "2009",
-    "thumbnail": "../images/pipe.jpg",
+    "thumbnail": "images/pipe.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "HANG AROUND & TOSS AROUND",
     "client": "Muuto",
     "releaseYear": "2011",
-    "thumbnail": "../images/HangAround.jpg",
+    "thumbnail": "images/HangAround.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "TMA-1 STUDIO",
     "client": "AiAiAi",
     "releaseYear": "2012",
-    "thumbnail": "../images/Tma-1Studio.jpg",
+    "thumbnail": "images/Tma-1Studio.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Knot",
     "client": "Kilo",
     "releaseYear": "2005",
-    "thumbnail": "../images/Knot.jpg",
+    "thumbnail": "images/Knot.jpg",
+    "href": "woobi",
     "featured": false
   },
   {
     "title": "Kilobike",
     "client": "Kilo",
     "releaseYear": "2004",
-    "thumbnail": "../images/Kilobike.jpg",
+    "thumbnail": "images/Kilobike.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "Hole Plate Table",
     "client": "",
     "releaseYear": "2009",
-    "thumbnail": "../images/HolePlateTable.jpg",
+    "thumbnail": "images/HolePlateTable.jpg",
+    "href": "woobi",
+    "blackText": true,
     "featured": false
   },
   {
     "title": "ÆSIR",
     "client": "ÆSIR",
     "releaseYear": "2012",
-    "thumbnail": "../images/Aesir.jpg",
+    "thumbnail": "images/Aesir.jpg",
+    "href": "woobi",
     "featured": false
   }
 ]

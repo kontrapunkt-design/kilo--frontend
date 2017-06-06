@@ -5,6 +5,11 @@ block config
   - var baseUrl = config.baseUrl || './'
   - var pageType = config.pageType || 'page'
   - var nameSpace = config.namespace || 'static'
+  - var site = site.data.kilodesign[0]
+
+include ../_modules/wipe/wipe
+include ../_modules/footer/footer
+
 
 doctype html
 <html class='no-js' lang='en'>
@@ -27,6 +32,12 @@ body(class=pageType)
   .site__body#barba-wrapper
     .barba-container(data-namespace=nameSpace)
       block content
+  .site__footer
+    +footer({
+      data: site.data.kilodesign[0]
+      })
+    
+  +wipe
 
   block scripts
     script(src= baseUrl + 'scripts/main.js')

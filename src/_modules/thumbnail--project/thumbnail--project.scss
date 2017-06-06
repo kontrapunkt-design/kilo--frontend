@@ -4,12 +4,21 @@
   position: relative;
   width: 100%;
   margin: 0;
+  opacity: 1;
+  transition: opacity 0.2s $global-easeing;
+  overflow: hidden;
   @include breakpoint(medium up){
     width: 50%;
   }
   a{
     display: block;
+    position: relative;
+    height: 100%;
     width: 100%;
+  }
+  &--new{
+    opacity: 0;
+    transition: opacity 0.2s $global-easeing;
   }
   &__content{
     display: block;
@@ -17,19 +26,30 @@
     bottom: 0;
     left: 0;
     max-width: 300px;
-    z-index: $layer--content;
+    z-index: $layer--content + 99;
     @include margin(leftBottom);
+    opacity: 0;
     .title{
-      color: white;
-      text-transform: uppercase;
-      @extend .lhTight;
+      color: $white;
+      font-weight: 900;
+      // text-transform: uppercase;
+      // @extend .lhTight;
+      .dark &{
+        color: $black;
+      }
     }
     .meta{
-      color: white;
+      color: $white;
       margin-bottom: 0;
+      .dark &{
+        color: $black;
+      }
     }
     .dash{
       @include dash();
+      .dark &{
+        background-color: $black;
+      }
     }
   }
   &__media{
@@ -37,6 +57,20 @@
     img{
       width: 100%;
       max-width: none;
+    }
+  }
+  .overlay{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    z-index: $layer--content;
+    opacity: 0;
+  }
+  &.dark{
+    .overlay{
+      background-color: $white;
     }
   }
 }

@@ -1,0 +1,21 @@
+mixin hero--project(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.backgroundColor = spec.backgroundColor || ''
+  - spec.title = spec.title || ''
+  - spec.patternImg = spec.patternImg || ''
+  - spec.usp = spec.usp || ''
+  - spec.heroImg = spec.heroImg || ''
+
+
+  div.hero--project(class=spec.__class style='background-color:#{spec.backgroundColor}')
+    .hero--project__content
+      //- div.meta-group
+      //-   span.meta.client #{spec.client}
+      //-   span  / 
+      //-   span.meta.date #{spec.date}
+      h1.title #{spec.title}
+      div.usp
+        p #{spec.usp}
+    .hero--project__media
+      img(src=spec.heroImg)

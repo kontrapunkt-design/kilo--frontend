@@ -1,0 +1,8 @@
+mixin wipe(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  div.wipe(class=spec.__class)&attributes(attributes)
+    .wipe__loading
+      p.wipe__loading__text loading
+      .wipe__loading__dash

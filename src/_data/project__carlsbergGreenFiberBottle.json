@@ -1,0 +1,28 @@
+[
+  {
+    "caseHero": {
+      "title": "Carlsberg Green Fiber Bottle",
+      "image": "images/Carlsberg.jpg",
+      "featured": true,
+      "bgColor": "#014425",
+      "usp": "Its fibers will come from responsibly managed sources, with trees replanted at the same rate that they are harvested.",
+      "description": "The new design of the Green Fiber Bottle was unveiled at the Sustainable Brands 2016 Conference in Copenhagen. As part of the work of the Carlsberg Circular Community, Carlsberg kicked off the development project in 2015 with Danish packaging company EcoXpac to develop a beer bottle made from sustainably sourced wood fiber. The first prototype of a fiber-based bottle was revealed in January 2015 by Professor Flemming Besenbacher, Chairman of the Carlsberg Foundation, at the World Economic Forum in Davos.\nThe Green Fiber Bottle will be a landmark in sustainable innovation. Its fibers will come from responsibly managed sources, with trees replanted at the same rate that they are harvested. While the bottle will degrade into environmentally non-harmful materials if discarded randomly, the intention is that it will form part of a proper waste management system, just like today’s bottles and cans. The three-year project is supported by Innovation Fund Denmark and the Technical University of Denmark. The Green Fiber Bottle is scheduled to be test-launched in a pilot market in 2018."
+    },
+    "metaInfo": {
+      "Client": "carlsberg",
+      "Year": "2017",
+      "Status": "in stores"
+    },
+    "sectionTitle": "A landmark in sustainable innovation",
+    "sideQuote": {
+      "quote": "The new bottle is a great milestone in the project, as having a physical prototype makes it easier for us to explain the new packaging format to consumers and colleagues.",
+      "cite": "Lars Larsen",
+      "link": "https://www.dezeen.com/2017/03/13/kilo-design-woobi-play-air-pollution-mask-protects-children-health-products/"
+    },
+    "secImg": "images/woobi/WOOBI-PLAY_WEB-01.jpg",
+    "caseItems": [
+      {
+      }
+    ]
+  }
+]

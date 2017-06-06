@@ -6,5 +6,8 @@
   @include margin();
   svg{
     fill:$black;
+    .top &{
+      fill: $white;
+    }
   }
 }

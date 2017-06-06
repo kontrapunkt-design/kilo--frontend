@@ -1,0 +1,13 @@
+mixin project__meta-info(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.metaInfo = spec.metaInfo || ''
+  - spec.backgroundColor = spec.backgroundColor || ''
+
+  div.project__meta-info(class=spec.__class)&attributes(attributes)
+    ul.meta-info
+      - for value, key in spec.metaInfo
+        li.list-item.meta
+          span.meta__label #{key}
+          span.meta__value #{value}
+   

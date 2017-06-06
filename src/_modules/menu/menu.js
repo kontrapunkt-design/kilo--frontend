@@ -21,14 +21,14 @@ export default class Menu {
           menuItemsActive = document.querySelector('.navigation .menu__list .active');
       if(document.body.classList.contains('page-index')){
         x = logo.getBoundingClientRect().left;
-        bgColor = '#000000';
+        bgColor = '#ffffff';
       }else{
         x = menuItemsActive.getBoundingClientRect().left;
         bgColor = '#ffffff';
         if(nav.classList.contains('top')){
           bgColor = '#ffffff';
         }else{
-          bgColor = '#000000';
+          bgColor = '#ffffff';
         }
       }
       return {
@@ -55,8 +55,8 @@ export default class Menu {
           if(nav.classList.contains('top')){
             bgColor = '#ffffff';
           }else{
-            bgColor = '#000000';
-          }          
+            bgColor = '#ffffff';
+          }
           menuDash(x, bgColor, bgColor).animation.play();
         });
         el.addEventListener('click', ()=>{
@@ -72,7 +72,7 @@ export default class Menu {
       });
       logo.addEventListener('mouseenter', ()=>{
         let x = logo.getBoundingClientRect().left;
-        menuDash(x, '#000000').animation.play();
+        menuDash(x, '#ffffff').animation.play();
       });
     }
 
