@@ -4,6 +4,7 @@
 }
 .address{
   color:  $white;
+  @include margin(left);
   p{
     margin: 0;
   }
@@ -14,6 +15,7 @@
   flex-direction: flex-end;
   align-items: flex-end;
   margin-left: 0;
+  @include margin(right);
   li{
     a{
       color: $white;
@@ -28,6 +30,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  @include margin(right);
   .list-item{
     margin-left: $spacing--medium;
     .title{

@@ -4,13 +4,40 @@ block config
   - var baseUrl = ''
   - var pageType = 'page-index'
   - var nameSpace = 'home'
+  - var siteDescription = site.data.kilodesign[0].description
+  - var clients = site.data.kilodesign[0].clients
+  - var collaboration = site.data.kilodesign[0].collaboration
 
 //- include _modules/link/link
 include _modules/hero/hero
+include _modules/collection/collection
+include _modules/paragraph/paragraph
+
 
 block content
   .container
     +hero({
       __video: 'hero--01',
-      __statment: 'At kilo we turn ideas into reality based on strategy, design sensibility and production knowhow'
+      __statment: 'At ki lo we turn ideas into reality based on strategy, design sensibility and production knowhow',
+      __loadingImg: 'images/loadingImg.jpg'
       })
+  .container.container--double-padding
+    .row
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: siteDescription
+          })
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: clients
+          })
+      .small-12.medium-6.large-4.column
+        +paragraph({
+          data: collaboration
+          })
+  .container
+    +collection--projects-frontpage({
+      __class: 'collection collection--projects collection--projects-frontpage',
+      __collectionClass: 'projects',
+      data: site.data.projects
+    })

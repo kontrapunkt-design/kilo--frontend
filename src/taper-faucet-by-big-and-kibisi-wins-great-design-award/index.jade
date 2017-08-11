@@ -1,0 +1,25 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var news = site.data.news__taperFaucetByBigAndKibisiWinsGreatDesignAward[0]
+  - var baseUrl = '../'
+  - var pageType = 'page-single-news'
+  - var nameSpace = 'singleNews'
+
+include ../_modules/hero--news/hero--news
+include ../_modules/news__content/news__content
+include ../_modules/case-item/case-item
+
+block content
+  .container.container--fixed.container--fullscreen
+    +hero--news({
+      __class: '',
+      embedMedia: news.newsHero.embedMedia,
+    })
+  .container.container--news__content
+    +news__content({
+      title: news.newsHero.title,
+      date: news.metaInfo.date,
+      content: news.content
+    })

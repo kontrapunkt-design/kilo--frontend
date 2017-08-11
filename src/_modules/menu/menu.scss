@@ -11,10 +11,8 @@
       font-weight: 600;
       @extend .meta;
       a{
-        color: $black;
-        .top &{
-          color: $white;
-        }
+        // color: $black;
+        color: $white;
       }
     }
   }

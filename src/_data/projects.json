@@ -33,7 +33,8 @@
     "thumbnail": "images/Neo.jpg",
     "href": "woobi",
     "bgColor": "#ee7e21",
-    "featured": true
+    "featured": true,
+    "frontpageFeatured": true
   },
   {
     "title": "UGO",
@@ -42,7 +43,8 @@
     "bgColor": "#c8d4d6",
     "thumbnail": "images/UGO.jpg",
     "href": "woobi",
-    "featured": true
+    "featured": true,
+    "frontpageFeatured": true
   },
   {
     "title": "TMA-2 Smart Headband – H05",
@@ -67,7 +69,8 @@
     "releaseYear": "2016",
     "thumbnail": "images/OTO.jpg",
     "href": "woobi",
-    "featured": true
+    "featured": true,
+    "frontpageFeatured": true
   },
   {
     "title": "OBLONG",
@@ -75,7 +78,8 @@
     "releaseYear": "2016",
     "thumbnail": "images/Oblong.jpg",
     "href": "woobi",
-    "featured": true
+    "featured": true,
+    "frontpageFeatured": true
   },
   {
     "title": "Forfatterhuset",

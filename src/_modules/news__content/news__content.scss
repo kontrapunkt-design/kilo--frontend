@@ -1,0 +1,24 @@
+// news__content styles
+.news__content{
+  @include margin(left);
+  &__title-group{
+    max-width: 48rem;
+    margin: $spacing--large 0 $spacing--medium;
+    h1{
+      color: $black;
+      font-weight: 900;
+    }
+    .meta{
+      margin-bottom: 0;
+    }
+  }
+  &__content{
+    max-width: 32rem;
+    margin-bottom: $spacing--large;
+    p{
+      color: rgba($black, 0.8);
+      line-height: 1.7125em;
+      margin-bottom: $spacing--medium;
+    }
+  }
+}

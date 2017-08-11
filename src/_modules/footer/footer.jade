@@ -4,7 +4,7 @@ mixin footer(spec)
   - spec.data = spec.data
 
   div.footer(class=spec.__class)&attributes(attributes)
-    .row.align-justify
+    .row.row--fullscreen.collapse.align-justify
       .small-12.medium-3.column
         .address
           p.street #{spec.data.contact.address.street}

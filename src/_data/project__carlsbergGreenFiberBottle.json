@@ -13,6 +13,30 @@
       "Year": "2017",
       "Status": "in stores"
     },
+    "recongnitions": [
+      "recongnition A",
+      "recongnition B",
+      "recongnition C",
+      "recongnition D"
+    ],
+    "awards": [
+      {
+        "name":"facebook",
+        "image": "../images/logo-06.svg"
+      },
+      {
+        "name":"instagram",
+        "image": "../images/logo-04.svg"
+      },
+      {
+        "name":"snapchat",
+        "image": "../images/logo-05.svg"
+      },
+      {
+        "name":"twitter",
+        "image": "../images/logo-04.svg"
+      }
+    ],
     "sectionTitle": "A landmark in sustainable innovation",
     "sideQuote": {
       "quote": "The new bottle is a great milestone in the project, as having a physical prototype makes it easier for us to explain the new packaging format to consumers and colleagues.",

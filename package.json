@@ -72,12 +72,14 @@
     "isotope-layout": "^3.0.4",
     "jade": "~1.11.0",
     "js-yaml": "~3.8.1",
-    "lodash": "~4.17.4",
+    "loadash": "0.0.1",
+    "lodash": "^4.17.4",
     "minimist": "~1.2.0",
     "rimraf": "~2.6.1",
-    "swiper": "^3.4.2",
+    "scrolldir": "^1.2.9",
     "scrollmagic": "^2.0.5",
     "scrollmonitor": "^1.2.3",
+    "swiper": "^3.4.2",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~3.9.0 "
@@ -101,5 +103,4 @@
       "browserify-shim"
     ]
   }
-
 }

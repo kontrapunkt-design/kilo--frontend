@@ -11,4 +11,6 @@ mixin multi-col-slider(spec)
             ul.list.swiper-wrapper
               - each item in col.col
                 li.list__item.swiper-slide
-                  img(src=baseUrl + item.image)
+                  img.list__item__img(src=baseUrl + item.image)
+                  if item.name
+                    p.meta.list__item__text #{item.name}

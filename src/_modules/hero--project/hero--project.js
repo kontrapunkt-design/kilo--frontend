@@ -28,10 +28,10 @@ export default class HeroProject {
 
 
       const tweenContent = TweenMax.staggerFromTo([heroUSP, heroTitle], 1, {
-        y: 0,
+        // y: 0,
         opacity:1,
       }, {
-        y: heroContent.offsetHeight+100,
+        // y: heroContent.offsetHeight+100,
         opacity:0,
       }, 0.05)
       const tweenMediaImg = TweenMax.fromTo(heroMediaImg, 1, {
@@ -56,9 +56,9 @@ export default class HeroProject {
         tweenChanges: true
       })
       .setTween(animation)
-      .addIndicators({
-        name: 'hero'
-      })
+      // .addIndicators({
+      //   name: 'hero'
+      // })
       .addTo(heroController);
 
     };

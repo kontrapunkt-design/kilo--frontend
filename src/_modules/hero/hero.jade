@@ -3,12 +3,27 @@ mixin hero(spec)
   - spec.__class = spec.__class || ''
   - spec.__statment = spec.__statment || ''
   - spec.__video = spec.__video || ''
+  - spec.__loadingImg = spec.__loadingImg || ''
 
   div.hero(class=spec.__class)
-    .row.row--fullscreen.medium-collapse
+    .row.row--fullscreen.collapse
       .hero__media
+        .icon__buffle.icon
+          svg(viewBox="0 0 120 20" 
+          xmlns="http://www.w3.org/2000/svg" version="1.1" 
+          xmlns:xlink="http://www.w3.org/1999/xlink")
+            g(stroke="none" stroke-width="1" fill="none" fill-rule="evenodd")
+              rect(id="bar" fill="#FFFFFF" x="0" y="0" width="60" height="20")
+              animateTransform(attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                values="0 0; 60 0; 0 0"
+                dur="0.5s"
+                fill="freeze"
+                repeatCount="indefinite")
         video(class="" autoplay loop muted poster="" id="heroVideo")
           source(src="../videos/" + spec.__video + ".mp4"  type="video/mp4")
+        img(class="loading-img" src=baseUrl + spec.__loadingImg)
       .small-12.medium-6.column.align-self-bottom
         .hero__content
           h1.statement #{spec.__statment}

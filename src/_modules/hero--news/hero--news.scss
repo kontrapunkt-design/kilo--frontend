@@ -1,0 +1,21 @@
+// hero--news styles
+.hero--news{
+  display: flex;
+  flex-basis: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  &__media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: $layer--background;
+    background-color: darken($white, 8%);
+    .embedMedia{
+      width: 100%;
+    }
+  }
+}

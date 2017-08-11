@@ -1,0 +1,13 @@
+mixin news__content(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.title = spec.title || ''
+  - spec.date = spec.date || ''
+  - spec.content = spec.content
+
+  div.news__content(class=spec.__class)&attributes(attributes)
+    .news__content__title-group
+      h1.title #{spec.title}
+      p.meta.date #{spec.date}
+    .news__content__content
+      p #{spec.content}

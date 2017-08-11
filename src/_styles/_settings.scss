@@ -96,7 +96,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
-  medium: 30px,
+  medium: 40px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -412,7 +412,7 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $black;
+$menu-item-color-active: $white;
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;

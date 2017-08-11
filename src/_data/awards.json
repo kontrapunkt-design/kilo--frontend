@@ -2,19 +2,19 @@
   {
     "col":[
       {
-        "client":"google",
+        "name":"google",
         "image": "../images/logo-04.svg"
       },
       {
-        "client":"amazon",
+        "name":"amazon",
         "image": "../images/logo-05.svg"
       },
       {
-        "client":"ebay",
+        "name":"ebay",
         "image": "../images/logo-06.svg"
       },
       {
-        "client":"microsoft",
+        "name":"microsoft",
         "image": "../images/logo-04.svg"
       }
     ]
@@ -22,19 +22,19 @@
   {
     "col":[
       {
-        "client":"facebook",
+        "name":"facebook",
         "image": "../images/logo-06.svg"
       },
       {
-        "client":"instagram",
+        "name":"instagram",
         "image": "../images/logo-04.svg"
       },
       {
-        "client":"snapchat",
+        "name":"snapchat",
         "image": "../images/logo-05.svg"
       },
       {
-        "client":"twitter",
+        "name":"twitter",
         "image": "../images/logo-04.svg"
       }
 
@@ -43,19 +43,19 @@
   {
     "col":[
       {
-        "client":"adobe",
+        "name":"adobe",
         "image": "../images/logo-05.svg"
       },
       {
-        "client":"github",
+        "name":"github",
         "image": "../images/logo-06.svg"
       },
       {
-        "client":"invision",
+        "name":"invision",
         "image": "../images/logo-04.svg"
       },
       {
-        "client":"something else",
+        "name":"something else",
         "image": "../images/logo-04.svg"
       }
     ]

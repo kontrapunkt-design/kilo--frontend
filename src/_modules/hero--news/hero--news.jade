@@ -1,0 +1,14 @@
+mixin hero--news(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.heroImg = spec.heroImg || ''
+  - spec.embedMedia = spec.embedMedia || ''
+
+
+  div.hero--news(class=spec.__class)
+    .hero--news__media
+      if spec.heroImg
+        img(src=spec.heroImg)
+      else if spec.embedMedia
+        .embedMedia.responsive-embed
+          iframe(src=spec.embedMedia frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen)

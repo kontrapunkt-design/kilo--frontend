@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import Barba from 'barba.js';
+import Navigation from '../_modules/navigation/navigation';
+import Menu from '../_modules/menu/menu';
+import Hero from '../_modules/hero/hero';
 import Collection from '../_modules/collection/collection';
 import HeroProject from '../_modules/hero--project/hero--project';
 import ProjectSection from '../_modules/project__section/project__section';
@@ -13,6 +16,8 @@ export default()=>{
 
   let projectHero = new HeroProject();
   let projectSection = new ProjectSection();
+  let siteNavigation = new Navigation();
+  let siteMenu = new Menu();
   //////////////////////////////////
   //************HOME*************//
   //////////////////////////////////
@@ -23,6 +28,7 @@ export default()=>{
         document.body.classList.add('page-index');
         $('.navigation .menu__list .menu__list__item').removeClass('active');
         document.body.classList.remove('page-news');
+        document.body.classList.remove('page-single-news');
         document.body.classList.remove('page-projects');
         document.body.classList.remove('page-about');
         projectHero.destroy();
@@ -30,6 +36,11 @@ export default()=>{
   },
     onEnterCompleted: function() {
         // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
+        let ProjectCollection = new Collection();
+        let SiteHero = new Hero();
+        projectsLoad().animation.play()
     },
     onLeave: function() {
         // A new Transition toward a new page has just started.
@@ -51,6 +62,7 @@ export default()=>{
         document.querySelector('.navigation .menu__list .projects').classList.add('active');
         document.body.classList.remove('page-news');
         document.body.classList.remove('page-index');
+        document.body.classList.remove('page-single-news');
         document.body.classList.remove('page-about');
         document.body.classList.remove('page-project');
         projectHero.destroy();
@@ -58,6 +70,8 @@ export default()=>{
     },
     onEnterCompleted: function() {
         // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
         let ProjectCollection = new Collection();
         projectsLoad().animation.play()
         ProjectCollection.render();
@@ -82,6 +96,7 @@ export default()=>{
         document.body.classList.add('page-about');
         document.querySelector('.navigation .menu__list .about').classList.add('active');
         document.body.classList.remove('page-news');
+        document.body.classList.remove('page-single-news');
         document.body.classList.remove('page-index');
         document.body.classList.remove('page-projects');
         document.body.classList.remove('page-project');
@@ -90,6 +105,9 @@ export default()=>{
     },
     onEnterCompleted: function() {
         // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
+        let SiteHero = new Hero();
         let SiteMultiColSlider = new MultiColSlider();
     },
     onLeave: function() {
@@ -112,6 +130,7 @@ export default()=>{
         document.querySelector('.navigation .menu__list .news').classList.add('active');
         document.body.classList.remove('page-about');
         document.body.classList.remove('page-index');
+        document.body.classList.remove('page-single-news');
         document.body.classList.remove('page-projects');
         document.body.classList.remove('page-project');
         projectHero.destroy();
@@ -119,6 +138,8 @@ export default()=>{
     },
     onEnterCompleted: function() {
         // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
     },
     onLeave: function() {
         // A new Transition toward a new page has just started.
@@ -141,10 +162,14 @@ export default()=>{
         document.querySelector('.navigation .menu__list .projects').classList.add('active');
         document.body.classList.remove('page-about');
         document.body.classList.remove('page-index');
+        document.body.classList.remove('page-news');
+        document.body.classList.remove('page-single-news');
         document.body.classList.remove('page-projects');
     },
     onEnterCompleted: function() {
         // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
         projectHero.render();
         if (document.querySelector('.project__section').classList.contains('project__section--sideImg')) {
           projectSection.render('default');
@@ -166,5 +191,42 @@ export default()=>{
   });
   // Don't forget to init the view!
   Project.init();
+
+  //////////////////////////////////
+  //*******Single project*********//
+  //////////////////////////////////
+  let SingleNews = Barba.BaseView.extend({
+    namespace: 'singleNews',
+    onEnter: function() {
+        // The new Container is ready and attached to the DOM.
+        document.body.classList.add('page-single-news');
+        document.querySelector('.navigation .menu__list .news').classList.add('active');
+        document.body.classList.remove('page-about');
+        document.body.classList.remove('page-index');
+        document.body.classList.remove('page-news');
+        document.body.classList.remove('page-projects');
+        document.body.classList.remove('page-project');
+        const siteBody = document.querySelector('.site__body'),
+              siteNewsHero = document.querySelector('.hero--news'),
+              siteNewsContent = document.querySelector('.container--news__content'),
+              targetheight = siteNewsHero.offsetHeight + siteNewsContent.offsetHeight;
+        siteBody.style.height = targetheight + 'px';
+    },
+    onEnterCompleted: function() {
+        // The Transition has just finished.
+        siteNavigation.init();
+        siteMenu.render();
+    },
+    onLeave: function() {
+        // A new Transition toward a new page has just started.
+    },
+    onLeaveCompleted: function() {
+        // The Container has just been removed from the DOM.
+        const siteBody = document.querySelector('.site__body');
+        siteBody.style.height = 'auto';
+    }
+  });
+  // Don't forget to init the view!
+  SingleNews.init();
 
 }

@@ -9,6 +9,8 @@
     }
   }
   &__content{
-
+    @include breakpoint(small only){
+      margin-bottom: $spacing--large;
+    }
   }
 }

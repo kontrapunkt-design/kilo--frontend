@@ -1,6 +1,7 @@
 import Barba from 'barba.js';
 import imagesLoaded from 'imagesloaded';
-import {thumbnailWipeSeq, thumbnailExpandSeq, pageWipeSeq, pageLoadingSeq } from './globalAnimations';
+import gsap from 'gsap';
+import {thumbnailWipeSeq, thumbnailExpandSeq, pageWipeSeq, pageLoadingSeq, navScrollSeq } from './globalAnimations';
 
 export default()=>{
 
@@ -59,7 +60,7 @@ export default()=>{
           myWipeText.style.color = '#ffffff';
           myWipeDash.style.backgroundColor = '#ffffff';
         } else {
-          myWipe.style.backgroundColor = '#ffffff';
+          myWipe.style.backgroundColor = '#eeeeee';
           myWipeText.style.color = '#000000';
           myWipeDash.style.backgroundColor = '#000000';
         }
@@ -85,6 +86,7 @@ export default()=>{
       //get wipe transiton here
       let targetHeight = lastElementClicked.offsetHeight;
       thumbnailWipeSeq().animation.play();
+      navScrollSeq().animation.reverse(0);
       deferred.resolve()
       return deferred.promise;
     },
@@ -95,21 +97,39 @@ export default()=>{
       let targetY = lastElementClicked.getBoundingClientRect().top;
 
       let newContainerImgLoad = new imagesLoaded(this.newContainer);
+      let myWipeLoading = document.querySelector('.wipe__loading')
       let myWipeText = document.querySelector('.wipe__loading__text')
+      let myWipeBg = document.querySelector('.wipe__background')
+      myWipeText.innerHTML = 'loading';
+      TweenMax.set(myWipeBg, {
+        scaleX: 0,
+      });
+      TweenMax.set(myWipeLoading, {
+        left: 0,
+      })
       newContainerImgLoad.on('progress', (instance, image)=>{
         var result = image.isLoaded ? 'loaded' : 'broken';
         let percentComplete = instance.progressedCount/instance.images.length;
         myWipeText.innerHTML = Math.floor(percentComplete*100) + '%';
+        TweenMax.to(myWipeBg, 0.1, {
+          scaleX: percentComplete,
+        });
+        TweenMax.to(myWipeLoading, 0.1, {
+          left: Math.floor(window.innerWidth * percentComplete)
+        });
       });
       newContainerImgLoad.on('done', ()=>{
-        // thumbnailExpandSeq(targetX, targetY, targetWidth, targetHeight).animation.play();
         thumbnailExpandSeq().animation.play();
+        myWipeText.innerHTML = 'loading';
         this.done();
-        // thumbnailExpandSeq().animation.eventCallback('onComplete', function(){
-        //   this.newContainer.style.visibility = 'visible';
-        //   document.body.style.overflow = 'auto';
-        // })
         setTimeout(()=>{
+          TweenMax.set(myWipeBg, {
+            scaleX: 0,
+          });
+          TweenMax.set(myWipeLoading, {
+            left: 0,
+          });
+          navScrollSeq().animation.play();
           this.newContainer.style.visibility = 'visible';
           document.body.style.overflow = 'auto';
         }, 1200)
@@ -126,27 +146,50 @@ export default()=>{
     },
     fadeback: function(){
       let deferred = Barba.Utils.deferred();
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = null;
       //get fadeback transiton here
       pageWipeSeq(
         deferred.resolve()
       ).animation.play();
+      navScrollSeq().animation.reverse(0);
       return deferred.promise;
     },
     showNewPage: function(){
       let newContainerImgLoad = new imagesLoaded(this.newContainer);
-      let myWipe = document.querySelector('.wipe')
-      let myWipeText = document.querySelector('.wipe__loading__text')
+      let myWipeLoading = document.querySelector('.wipe__loading')
+      let myWipeText = document.querySelector('.wipe__loading__text');
+      let myWipeBg = document.querySelector('.wipe__background')
+      myWipeText.innerHTML = 'loading';
+      TweenMax.set(myWipeBg, {
+        scaleX: 0,
+      });
+      TweenMax.set(myWipeLoading, {
+        left: 0,
+      })
       newContainerImgLoad.on('progress', (instance, image)=>{
         var result = image.isLoaded ? 'loaded' : 'broken';
         let percentComplete = instance.progressedCount/instance.images.length;
         myWipeText.innerHTML = Math.floor(percentComplete*100) + '%';
+        console.log('loading' + percentComplete);
+        TweenMax.to(myWipeBg, 0.1, {
+          scaleX: percentComplete,
+        });
+        TweenMax.to(myWipeLoading, 0.1, {
+          left: Math.floor(window.innerWidth * percentComplete)
+        });
       });
       newContainerImgLoad.on('done', ()=>{
         document.body.style.overflow = 'auto';
-        pageLoadingSeq(
-          this.done()
-        ).animation.play();
+        myWipeText.innerHTML = 'loading';
+        TweenMax.set(myWipeBg, {
+          scaleX: 0,
+        });
+        TweenMax.set(myWipeLoading, {
+          left: 0,
+        });
+        this.done()
+        navScrollSeq().animation.play();
+        pageLoadingSeq().animation.play();
       });
     }
   });

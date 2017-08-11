@@ -2,12 +2,30 @@ mixin project__meta-info(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
   - spec.metaInfo = spec.metaInfo || ''
+  - spec.recongnitions = spec.recongnitions || ''
+  - spec.awards = spec.awards || ''
   - spec.backgroundColor = spec.backgroundColor || ''
 
   div.project__meta-info(class=spec.__class)&attributes(attributes)
-    ul.meta-info
-      - for value, key in spec.metaInfo
-        li.list-item.meta
-          span.meta__label #{key}
-          span.meta__value #{value}
-   
+    .row.row--fullscreen.collapse
+      if spec.metaInfo
+        .small-12.medium-4.column
+          ul.list.meta-info(title='Info')
+            - for value, key in spec.metaInfo
+              li.list-item.meta
+                span.meta__label #{key}
+                |  - 
+                span.meta__value #{value}       
+      if spec.recongnitions
+        .small-12.medium-4.column
+          ul.list.recongnitions(title='Recongnitions')
+            - for item in spec.recongnitions
+              li.list-item.meta
+                span.meta__value #{item}
+      if spec.awards
+        .small-12.medium-4.column
+          .swiper-container
+            ul.swiper-wrapper
+              - each item in spec.awards
+                li.list__item.swiper-slide
+                  img.list__item__img(src=baseUrl + item.image)

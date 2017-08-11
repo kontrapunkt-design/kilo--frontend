@@ -1,9 +1,9 @@
 mixin thumbnail--news(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
-  div.thumbnail.thumbnail--news(class=spec.__class)
-    a(href="#")
-      .row.row--fullscreen.collapse
+  .row.row--fullscreen.collapse.align-center
+    div.thumbnail.thumbnail--news(class=spec.__class)
+      a(href=baseUrl+item.link)
         .small-12.medium-6.column
           .thumbnail--news__content
             span.dash
@@ -12,4 +12,8 @@ mixin thumbnail--news(spec)
             p.teaser #{item.teaser}
         .small-12.medium-6.column
           .thumbnail--news__media
-            img(src=item.thumbnail)
+            if item.thumbnail
+              img(src=item.thumbnail)
+            else if item.thumbnailEmbededVideo
+              .embedMedia.responsive-embed
+                iframe(src=item.thumbnailEmbededVideo frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen)

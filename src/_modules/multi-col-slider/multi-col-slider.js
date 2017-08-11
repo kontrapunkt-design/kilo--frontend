@@ -16,11 +16,13 @@ export default class MultiColSlider {
     let init = (()=>{
       slidersImgLoad.on('done', ()=>{
         sliders.forEach((el, i)=>{
-          el.style.height = targetH + 'px';
+          // el.style.height = targetH + 'px';
           let mySwiper = new Swiper(el, {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             direction: 'vertical',
             loop: true,
+            autoHeight: true,
+            setWrapperSize: true,
             autoplay: 3000 + i*100,
             speed: 600,
             autoplayDisableOnInteraction: false

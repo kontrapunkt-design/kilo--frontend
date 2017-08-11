@@ -19,22 +19,6 @@
       max-width: none;
     }
   }
-  &__description{
-    @include margin(leftTop);
-    padding-bottom: $spacing--large;
-    max-width: 32rem;
-    // border-top: 1px solid rgba($black, 0.5);
-    .title{
-      margin-bottom: $spacing--medium+$spacing--small*0.5;
-      color: rgba($black, 0.8);
-    }
-    p{
-      color: rgba($black, 0.8);
-      // @extend h6;
-      line-height: 1.7125em;
-      margin-bottom: $spacing--medium;
-    }
-  }
   &__content{
     display: block;
     position: absolute;
@@ -42,24 +26,38 @@
     opacity: 0;
     z-index: $layer--content;
     max-width: 32rem;
-    @include margin(leftBottom);
+    @include margin(leftBottomRight);
+    @include breakpoint(xxlarge up){
+      max-width: 38rem;
+    }
+    @include breakpoint(small only){
+      position: relative;
+      padding: $spacing--medium*1.75 0 $spacing--medium;
+    }
     h1{
       color: $white;
       // text-transform: uppercase;
-      font-size: 600%;
       // line-height: 0.875em;
+      font-size: 250%;
       font-weight: 900;
       // transform: translateY(-10px);
-    }
-    .meta-group{
-      color: $white;
-      // font-weight: 600;
+      @include breakpoint(medium up){
+
+      }
+      @include breakpoint(large up){
+        font-size: 400%;
+      }
+      @include breakpoint(xlarge up){
+        font-size: 400%;
+      }
+      @include breakpoint(xxlarge up){
+        font-size: 600%;
+      }
     }
     .usp{
-      p{
-        @extend h4;
-        color: $white;
-      }
+      color: $white;
+      @extend h5;
+      font-weight: 900;
     }
   }
 }

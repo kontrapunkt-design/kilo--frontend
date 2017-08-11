@@ -4,24 +4,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: $layer--overlay + 99;
   position: relative;
   transform: translateX(0);
   transform-origin: top left;
-  background-color: $white;
-  z-index: $layer--overlay + 99;
+  background-color: $black;
+  z-index: $layer--overlay + 999;
   &__loading{
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 0;
     width: 150px;
     height: 40px;
-    position: relative;
+    position: absolute;
+    z-index: $layer--content;
+    transform: rotate(90deg);
     &__text{
       @extend h3;
       font-weight: 800;
       color: $black;
       margin: 0;
+      text-align: center;
     }
     &__dash{
       display: block;
@@ -32,5 +35,17 @@
       background-color: $black;
       transform-origin: center right;
     }
+  }
+  &__background{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: $layer--content - 1;
+    transform: scaleX(0);
+    transform-origin: left center;
   }
 }

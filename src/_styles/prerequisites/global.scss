@@ -10,6 +10,9 @@
   width: 100%;
   float: left;
   background-color: $white;
+  .page-news &{
+    padding-top: $navigation-height;
+  }
 }
 .site__footer{
   display: block;
@@ -42,7 +45,18 @@
   background-color: $white;
   position: relative;
   overflow: hidden;
+  &--fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   &--fullscreen{
+    display:flex;
+    height: 100vh;
+  }
+  &--news__content{
+    top: 100vh;
   }
   &--double-padding-top{
   }

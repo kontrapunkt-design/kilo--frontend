@@ -2,6 +2,7 @@
 import ScrollMagic from 'ScrollMagic';
 import TweenMax from 'animation.TweenMax';
 import addIndicators from 'debug.addIndicators';
+import '../../_scripts/vendors/modernizr';
 
 
 export default class ProjectSection {
@@ -21,6 +22,7 @@ export default class ProjectSection {
     let sectionPinScene = new ScrollMagic.Scene({
     });
 
+    let smallUp = Modernizr.mq('(min-width: 640px)');
 
 
     let _render = (sectionType)=>{
@@ -55,9 +57,9 @@ export default class ProjectSection {
         triggerHook: 0.5,
         tweenChanges: true
       })
-      .addIndicators({
-        name: 'section'
-      })
+      // .addIndicators({
+      //   name: 'section'
+      // })
       .addTo(sectionController);
 
       sectionScene
@@ -97,7 +99,9 @@ export default class ProjectSection {
             animationSideQuote.play();
           })
           .on('leave', ()=>{
-            animationSideQuote.reverse(0);
+            if(smallUp){
+              animationSideQuote.reverse(0);
+            }
           });
 
           break;
@@ -110,7 +114,7 @@ export default class ProjectSection {
             triggerHook: 0.5,
             tweenChanges: true
           })
-          .setPin(sectionMediaImg)
+          // .setPin(sectionMediaImg)
           .addTo(sectionController);
 
       }

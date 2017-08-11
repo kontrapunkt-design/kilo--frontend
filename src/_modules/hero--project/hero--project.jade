@@ -9,6 +9,8 @@ mixin hero--project(spec)
 
 
   div.hero--project(class=spec.__class style='background-color:#{spec.backgroundColor}')
+    .hero--project__media
+      img(src=spec.heroImg)
     .hero--project__content
       //- div.meta-group
       //-   span.meta.client #{spec.client}
@@ -17,5 +19,3 @@ mixin hero--project(spec)
       h1.title #{spec.title}
       div.usp
         p #{spec.usp}
-    .hero--project__media
-      img(src=spec.heroImg)

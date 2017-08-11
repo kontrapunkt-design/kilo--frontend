@@ -33,6 +33,33 @@
       margin-top: $spacing--large;
     }
   }
+  @else if $position == leftRight{
+    margin-left: $spacing--small;
+    margin-right: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+      margin-right: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+      margin-right: $spacing--large;
+    }
+  }
+  @else if $position == leftTopRight{
+    margin-left: $spacing--small;
+    margin-top: $spacing--small;
+    margin-right: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+      margin-top: $spacing--medium;
+      margin-right: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+      margin-top: $spacing--large;
+      margin-right: $spacing--large;
+    }
+  }
   @else if $position == right{
     margin-right: $spacing--small;
     @include breakpoint(medium){
@@ -52,6 +79,21 @@
     @include breakpoint(xlarge){
       margin-left: $spacing--large;
       margin-bottom: $spacing--large;
+    }
+  }
+  @else if $position == leftBottomRight{
+    margin-left: $spacing--small;
+    margin-bottom: $spacing--small;
+    margin-right: $spacing--small;
+    @include breakpoint(medium){
+      margin-left: $spacing--medium;
+      margin-bottom: $spacing--medium;
+      margin-right: $spacing--medium;
+    }
+    @include breakpoint(xlarge){
+      margin-left: $spacing--large;
+      margin-bottom: $spacing--large;
+      margin-right: $spacing--large;
     }
   }
 }

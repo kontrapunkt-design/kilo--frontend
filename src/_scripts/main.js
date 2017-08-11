@@ -4,6 +4,7 @@
 'use strict';
 
 import $ from 'jquery';
+import modernizr from './vendors/modernizr';
 import Barba from 'barba.js'
 import BarbaView from './BarbaView';
 import PageTransition from './PageTransition';

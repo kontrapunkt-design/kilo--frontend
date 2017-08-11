@@ -17,28 +17,26 @@ export default class Menu {
 
     let posX = ()=>{
       let x = null,
-          bgColor = null,
-          menuItemsActive = document.querySelector('.navigation .menu__list .active');
+          y = 0,
+          bgColor = '#ffffff',
+          menuItemsActive = document.querySelector('.navigation .menu__list .active'),
+          menuItemProject = document.querySelector('.navigation .menu__list .projects');
       if(document.body.classList.contains('page-index')){
-        x = logo.getBoundingClientRect().left;
-        bgColor = '#ffffff';
+        x = menuItemProject.getBoundingClientRect().left;
+        y = -navDash.offsetHeight;
       }else{
         x = menuItemsActive.getBoundingClientRect().left;
-        bgColor = '#ffffff';
-        if(nav.classList.contains('top')){
-          bgColor = '#ffffff';
-        }else{
-          bgColor = '#ffffff';
-        }
       }
       return {
         x: x,
+        y: y,
         bgColor: bgColor
       }
     }
+
     function initPos(){
       setTimeout(()=>{
-        menuDash(posX().x, posX().bgColor, posX().bgColor).animation.play();
+        menuDash(posX().x, posX().y, posX().bgColor, posX().bgColor).animation.play();
       }, 200);
     }
 
@@ -48,15 +46,11 @@ export default class Menu {
 
     let _render = ()=>{
       console.log('render menu hover effect');
+      initPos();
       menuItems.forEach((el)=>{
         el.addEventListener('mouseenter', ()=>{
           let x = el.getBoundingClientRect().left,
-              bgColor = null;
-          if(nav.classList.contains('top')){
-            bgColor = '#ffffff';
-          }else{
-            bgColor = '#ffffff';
-          }
+              bgColor = '#ffffff';
           menuDash(x, bgColor, bgColor).animation.play();
         });
         el.addEventListener('click', ()=>{
@@ -67,13 +61,9 @@ export default class Menu {
       menu.addEventListener('mouseleave', ()=>{
         initPos();
       });
-      logo.addEventListener('mouseleave', ()=>{
+      logo.addEventListener('click', ()=>{
         initPos();
-      });
-      logo.addEventListener('mouseenter', ()=>{
-        let x = logo.getBoundingClientRect().left;
-        menuDash(x, '#ffffff').animation.play();
-      });
+      })
     }
 
     return {

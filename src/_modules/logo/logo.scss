@@ -4,10 +4,10 @@
   width: 54px;
   height: 30px;
   @include margin();
+  @include breakpoint(small only){
+    margin-left: 0;
+  }
   svg{
-    fill:$black;
-    .top &{
-      fill: $white;
-    }
+    fill:$white;
   }
 }

@@ -5,14 +5,16 @@ import scrollToTop from './vendors/ScrollToPlugin';
 import splitText from './vendors/SplitText';
 
 
-export function menuDash(PosX, bgColor='#ffffff', InitbgColor='#ffffff'){
+export function menuDash(PosX, PosY, bgColor='#ffffff', InitbgColor='#ffffff'){
   let navDash = document.querySelector('.navigation .navigation__dash');
 
   let navDashTween = TweenMax.fromTo(navDash, 0.4, {
-    scaleX: 1.5
+    scaleX: 1.5,
+    y: 0
   }, {
     scaleX: 1,
     left: PosX,
+    y: PosY,
     backgroundColor: bgColor
   });
 
@@ -60,10 +62,12 @@ export function thumbnailWipeSeq(){
     display: 'none',
     opacity: 0,
     scaleX: 0,
+    x: 0,
   }, {
     display: 'flex',
     opacity: 1,
     scaleX: 1,
+    x: 0,
   })
 
   let wipeDashTween = TweenMax.fromTo(wipeDash, 0.2, {
@@ -96,7 +100,7 @@ export function thumbnailExpandSeq(targetX, targetY, targetWidth,targetHeight){
     // height: targetHeight,
     left: 0,
     top:0,
-    x: 0
+    x: window.innerWidth,
   },
     {
     // top: 0,
@@ -123,7 +127,7 @@ export function thumbnailExpandSeq(targetX, targetY, targetWidth,targetHeight){
 
 
   let thumbnailWipeTweenFade = TweenMax.to(wipe, 0.4, {
-    opacity: 0,
+    // opacity: 0,
     delay: 0.2,
     display: 'none',
     onComplete: function(){
@@ -133,10 +137,10 @@ export function thumbnailExpandSeq(targetX, targetY, targetWidth,targetHeight){
 
 
   let thumbnailWipeExpAnimation = new TimelineMax()
+  .add(scrollToTopTween)
   .add(thumbnailWipeTweenExp)
   .add(collectionProjectsTween)
   // .add(thumbnailWipeTweenWipe)
-  .add(scrollToTopTween)
   .add(thumbnailWipeTweenFade);
 
   return {
@@ -269,19 +273,21 @@ export function pageWipeSeq(callback){
       page = document.querySelector('.site__body'),
       wipeDash = document.querySelector('.wipe .wipe__loading__dash');
 
-  let pageFadeTween = TweenMax.to(page, 0.4, {
-    opacity: 0,
-  });
-
   let pageWipeTween = TweenMax.fromTo(wipe, 0.4, {
     display: 'none',
     opacity: 0,
     scaleX: 0,
+    x: 0,
   }, {
     display: 'flex',
     opacity: 1,
     scaleX: 1,
+    x: 0,
   })
+
+  let pageFadeTween = TweenMax.to(page, 0.4, {
+    opacity: 0,
+  });
 
   let wipeDashTween = TweenMax.fromTo(wipeDash, 0.2, {
     width: 150,
@@ -294,8 +300,8 @@ export function pageWipeSeq(callback){
   })
 
   let pageWipeAnimation = new TimelineMax()
-  .add(pageFadeTween)
   .add(pageWipeTween)
+  .add(pageFadeTween)
   .add(wipeDashTween);
 
   return {
@@ -317,7 +323,8 @@ export function pageLoadingSeq(callback){
     onComplete: ()=>{
       TweenMax.to(wipe, 0.2, {
         display: 'none',
-        opacity: 0,
+        x: window.innerWidth,
+        // opacity: 0,
         onComplete: ()=>{
           callback;
         }
@@ -339,7 +346,12 @@ export function pageLoadingSeq(callback){
     width: 150,
   })
 
+  let scrollToTopTween = TweenMax.to(window, 0.2, {
+    scrollTo: 0,
+  })
+
   let pageWipeAnimation = new TimelineMax()
+  .add(scrollToTopTween)
   .add(pageWipeTween)
   .add(wipeDashTween)
   .add(pageFadeInTween);
@@ -353,10 +365,14 @@ export function pageLoadingSeq(callback){
 
 export function thumbnailProjectHoverSeq(el, elTitle, elMeta, elOverlay, elImg){
 
-  let tweenOverlay = TweenMax.fromTo(elOverlay, 0.2, {
-    opacity: 0
+  let tweenOverlay = TweenMax.fromTo(elOverlay, 0.25, {
+    x: 0,
+    scaleX: 0,
+    opacity: 1
   }, {
-    opacity: 0.75
+    x: 0,
+    scaleX: 1,
+    opacity: 1
   })
 
   let tween = TweenMax.fromTo(el, 0.2, {
@@ -378,11 +394,13 @@ export function thumbnailProjectHoverSeq(el, elTitle, elMeta, elOverlay, elImg){
     let tweenImg = TweenMax.fromTo(elImg, 0.5, {
       scale: 1
     }, {
-      scale: 1.2
+      scale: 1.05
     })
 
 
-  let animation = new TimelineMax().add([tweenOverlay, tween]).add(tweenChildren).add(tweenImg, 0.2);
+  let animation = new TimelineMax({
+    paused:true
+  }).add([tweenOverlay, tween]).add(tweenChildren).add(tweenImg, 0.2);
 
   return {
     animation : animation
@@ -403,6 +421,47 @@ export function scrollSeq(el){
 
   return {
     animation: animationScroll
+  }
+
+}
+
+export function navScrollSeq(){
+
+  let nav = document.querySelector('.navigation');
+  let navLogo = document.querySelector('.navigation .logo');
+  let navChildren = document.querySelectorAll('.navigation .menu__list__item');
+
+  const tweenParentScroll = TweenMax.fromTo(nav, 0.4, {
+    opacity: 0,
+    y: -20
+  }, {
+    opacity: 1,
+    y: 0
+  })
+
+  const tweenLogoScroll = TweenMax.fromTo(navLogo, 0.2, {
+    opacity: 0,
+    y: -20
+  }, {
+    opacity: 1,
+    y: 0
+  })
+
+  const tweenChildrenScroll = TweenMax.staggerFromTo(navChildren, 0.2, {
+    opacity: 0,
+    y: -20
+  }, {
+    opacity: 1,
+    y: 0
+  }, 0.05)
+
+  const animation = new TimelineMax()
+  .add(tweenParentScroll)
+  .add(tweenLogoScroll)
+  .add(tweenChildrenScroll)
+
+  return {
+    animation: animation
   }
 
 }

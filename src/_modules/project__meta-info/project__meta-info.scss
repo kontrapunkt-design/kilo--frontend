@@ -2,18 +2,45 @@
 .project__meta-info{
   background-color: lighten($black, 5%);
   padding: $spacing--large 0;
-  .meta-info{
+  .list{
     @include margin(left);
     margin-bottom: 0;
     list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    &:before{
+      content: attr(title);
+      display: block;
+      font-weight: bold;
+      color: $white;
+      margin-bottom: $spacing--medium;
+      @extend h5;
+    }
     .meta{
       color: $white;
-      margin-right: $spacing--large;
+      margin-bottom: $spacing--small;
       span{
-        display: block;
+        display: inline-block;
       }
+      &__value{
+        font-weight: 500;
+      }
+    }
+  }
+  .swiper-container{
+    // margin-top: -$spacing--medium;
+  }
+  .swiper-wrapper{
+    margin: 0;
+    .swiper-slide{
+      margin-left: 0;
+    }
+    .swiper-slide-active{
+      opacity: 1;
+      transition: opacity 0.2s $global-easeing;
+    }
+    .list__item__text{
+      color: $white;
     }
   }
 }

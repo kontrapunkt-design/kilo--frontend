@@ -1,19 +1,21 @@
 // navigation styles
 .navigation{
   padding:$spacing--medium*1.5 0 $spacing--medium;
-  background-color: rgba($white, 0.6);
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.2s $global-easeing,
-              transform 0.8s $global-easeing;
-  &.scrolling{
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity 0.2s $global-easeing,
-                transform 0.8s $global-easeing;
-  }
+  background-color: rgba($black, 0.8);
+  // opacity: 1;
+  // transform: translateY(0);
+  // transition: opacity 0.2s $global-easeing,
+  //             transform 0.8s $global-easeing;
+  // &.scrolling{
+  //   opacity: 0;
+  //   transform: translateY(-100%);
+  //   transition: opacity 0.2s $global-easeing,
+  //               transform 0.8s $global-easeing;
+  // }
   &.top{
-    background-color: transparent;
+    .page-news &{
+      background-color: rgba($black, 0.8);
+    }
   }
   &__dash{
     @include dash();

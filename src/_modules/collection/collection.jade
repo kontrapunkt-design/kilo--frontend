@@ -16,6 +16,28 @@ mixin collection--projects(spec)
           else 
             include ../thumbnail--project/thumbnail--project
             +thumbnail--project
+
+
+mixin collection--projects-frontpage(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.__collectionClass = spec.__collectionClass || ''
+  - spec.data = spec.data || ''
+  div(class=spec.__class)
+    div(class=spec.__collectionClass)
+      - each item in spec.data
+        if item.frontpageFeatured == true
+          if item.blackText == true
+            include ../thumbnail--project/thumbnail--project
+            +thumbnail--project({
+              __class: 'dark',
+              data__color: item.bgColor
+              })
+          else 
+            include ../thumbnail--project/thumbnail--project
+            +thumbnail--project
+
+
   
 mixin collection--projects-archive(spec)
   - spec = spec || {}
