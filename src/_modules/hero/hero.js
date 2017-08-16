@@ -33,7 +33,6 @@ export default class Hero {
         TweenMax.to(this.heroBuffle, 0.2, {
           opacity: 0
         })
-        console.log('streaming');
       });
     })()
 

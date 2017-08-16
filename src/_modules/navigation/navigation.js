@@ -18,13 +18,13 @@ export default class Navigation {
       if(windowScrollTop>0){
         nav.classList.remove('top')
         TweenMax.to(nav, 0.2, {
-          backgroundColor : 'rgba(0,0,0,1)',
+          backgroundColor : 'rgba(0,0,0,0.7)',
         });
       }else{
           nav.classList.add('top');
           if (document.body.classList.contains('page-news')) {
             TweenMax.to(nav, 0.2, {
-              backgroundColor : 'rgba(0,0,0,1)',
+              backgroundColor : 'rgba(0,0,0,0.7)',
             });
           } else {
             TweenMax.to(nav, 0.2, {

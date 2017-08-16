@@ -50,7 +50,8 @@ gulp.task('build', [
   'fonts',
   'jade',
   'sass',
-  'browserify'
+  'browserify',
+  'copyToDeploy'
 ]);
 
 // Server tasks with watch
