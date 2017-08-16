@@ -22,7 +22,7 @@ export default()=>{
   //************HOME*************//
   //////////////////////////////////
   let Home = Barba.BaseView.extend({
-    namespace: 'home',
+    namespace: 'template-home.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-index');
@@ -55,7 +55,7 @@ export default()=>{
   //************PROJECTS*************//
   //////////////////////////////////
   let Projects = Barba.BaseView.extend({
-    namespace: 'projects',
+    namespace: 'template-work.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-projects');
@@ -90,7 +90,7 @@ export default()=>{
   //************ABOUT*************//
   //////////////////////////////////
   let About = Barba.BaseView.extend({
-    namespace: 'about',
+    namespace: 'template-about.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-about');
@@ -123,7 +123,7 @@ export default()=>{
   //************NEWS*************//
   //////////////////////////////////
   let News = Barba.BaseView.extend({
-    namespace: 'news',
+    namespace: 'template-news.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-news');
@@ -155,7 +155,7 @@ export default()=>{
   //*******Single project*********//
   //////////////////////////////////
   let Project = Barba.BaseView.extend({
-    namespace: 'project',
+    namespace: 'single-work.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-project');
@@ -196,7 +196,7 @@ export default()=>{
   //*******Single project*********//
   //////////////////////////////////
   let SingleNews = Barba.BaseView.extend({
-    namespace: 'singleNews',
+    namespace: 'single-news.php',
     onEnter: function() {
         // The new Container is ready and attached to the DOM.
         document.body.classList.add('page-single-news');
