@@ -130,7 +130,7 @@
     }
     .dash{
       @include dash();
-      margin: $spacing--small auto;
+      margin: $spacing--medium auto $spacing--small;
     }
     footer{
       @extend .meta;

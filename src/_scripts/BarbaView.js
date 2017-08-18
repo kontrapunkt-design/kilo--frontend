@@ -73,8 +73,8 @@ export default()=>{
         siteNavigation.init();
         siteMenu.render();
         let ProjectCollection = new Collection();
-        projectsLoad().animation.play()
         ProjectCollection.render();
+        projectsLoad().animation.play()
         let myLoading = new Loading();
     },
     onLeave: function() {

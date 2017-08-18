@@ -200,7 +200,7 @@ export default()=>{
   console.log(lastElementClicked);
 
   if (lastElementClicked.classList.contains('thumbnail--project__target')){
-    transitionObj = toProjectTransition;
+    // transitionObj = toProjectTransition;
     console.log('***to project***');
   } else if (lastElementClicked.classList.contains('menu__list__item__target')){
     transitionObj = toHomeTransition;
