@@ -23,7 +23,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 220%;
+      width: 300%;
       transform: translate3d(-52.5%, -25%, 0);
       z-index: $layer--background + 1;
       @include breakpoint(portrait) {
