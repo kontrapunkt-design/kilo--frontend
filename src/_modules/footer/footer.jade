@@ -7,14 +7,14 @@ mixin footer(spec)
     .row.row--fullscreen.collapse.align-justify
       .small-12.medium-3.column
         .address
-          p.street #{spec.data.contact.address.street}
-          p.city #{spec.data.contact.address.postCode} #{spec.data.contact.address.city}
-          p.country #{spec.data.contact.address.country}
+          p.street.meta.bold #{spec.data.contact.address.street}
+          p.city.meta.bold #{spec.data.contact.address.postCode} #{spec.data.contact.address.city}
+          p.country.meta.bold #{spec.data.contact.address.country}
       .small-12.medium-3.column
       .small-12.medium-4.column
         ul.emails.list
           - for item in spec.data.contact.emails
-            li.list-item.email
+            li.list-item.email.meta.bold
               a(href="mailto:") #{item.email}
         ul.social-media.list
           - for sm in spec.data.socialMedia
