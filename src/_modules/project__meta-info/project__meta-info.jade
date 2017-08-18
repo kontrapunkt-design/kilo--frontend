@@ -1,3 +1,5 @@
+include ../../_modules/button/button
+
 mixin project__meta-info(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
@@ -16,6 +18,12 @@ mixin project__meta-info(spec)
                 span.meta__label #{key}
                 |  - 
                 span.meta__value #{value}       
+          +button({
+            __class: 'button--download button--default',
+            __id: 'buttonDownload',
+            __text: 'see hi-res images',
+            __icon: 'icon__arrow'
+            })
       if spec.recongnitions
         .small-12.medium-4.column
           ul.list.recongnitions(title='Recongnitions')

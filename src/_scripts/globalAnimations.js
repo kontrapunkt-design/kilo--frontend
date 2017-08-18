@@ -365,7 +365,7 @@ export function pageLoadingSeq(callback){
 
 export function thumbnailProjectHoverSeq(el, elTitle, elMeta, elOverlay, elImg){
 
-  let tweenOverlay = TweenMax.fromTo(elOverlay, 0.25, {
+  let tweenOverlay = TweenMax.fromTo(elOverlay, 0.5, {
     x: 0,
     scaleX: 0,
     opacity: 1

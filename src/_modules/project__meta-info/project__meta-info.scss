@@ -4,7 +4,7 @@
   padding: $spacing--large 0;
   .list{
     @include margin(left);
-    margin-bottom: 0;
+    margin-bottom: $spacing--medium;
     list-style: none;
     display: flex;
     flex-direction: column;
