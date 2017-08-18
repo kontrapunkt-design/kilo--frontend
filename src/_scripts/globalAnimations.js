@@ -431,37 +431,54 @@ export function navScrollSeq(){
   let navLogo = document.querySelector('.navigation .logo');
   let navChildren = document.querySelectorAll('.navigation .menu__list__item');
 
-  const tweenParentScroll = TweenMax.fromTo(nav, 0.4, {
-    opacity: 0,
-    y: -20
-  }, {
+  const tweenParentScrollUp = TweenMax.to(nav, 0.4, {
     opacity: 1,
     y: 0
   })
 
-  const tweenLogoScroll = TweenMax.fromTo(navLogo, 0.2, {
-    opacity: 0,
-    y: -20
-  }, {
+  const tweenLogoScrollUp = TweenMax.to(navLogo, 0.2, {
     opacity: 1,
     y: 0
   })
 
-  const tweenChildrenScroll = TweenMax.staggerFromTo(navChildren, 0.2, {
-    opacity: 0,
-    y: -20
-  }, {
+  const tweenChildrenScrollUp = TweenMax.staggerTo(navChildren, 0.2, {
     opacity: 1,
     y: 0
   }, 0.05)
 
-  const animation = new TimelineMax()
-  .add(tweenParentScroll)
-  .add(tweenLogoScroll)
-  .add(tweenChildrenScroll)
+  const tweenParentScrollDown = TweenMax.to(nav, 0.4, {
+    opacity: 0,
+    y: -20
+  })
+
+  const tweenLogoScrollDown = TweenMax.to(navLogo, 0.2, {
+    opacity: 0,
+    y: -20
+  })
+
+  const tweenChildrenScrollDown = TweenMax.staggerTo(navChildren, 0.2, {
+    opacity: 0,
+    y: -20
+  }, 0.05)
+
+
+  const animationUp = new TimelineMax()
+  .add(tweenParentScrollUp)
+  .add(tweenLogoScrollUp)
+  .add(tweenChildrenScrollUp)
+  .pause();
+
+  const animationDown = new TimelineMax()
+  .add(tweenParentScrollDown)
+  .add(tweenLogoScrollDown)
+  .add(tweenChildrenScrollDown)
+  .pause();
+
 
   return {
-    animation: animation
+    animationUp: animationUp,
+    animationDown: animationDown
+
   }
 
 }

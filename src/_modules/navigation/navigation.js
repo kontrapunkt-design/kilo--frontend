@@ -12,6 +12,7 @@ export default class Navigation {
     let navLogo = document.querySelector('.navigation .logo');
     let navChildren = document.querySelectorAll('.navigation .menu__list__item');
     let navDash = document.querySelector('.navigation .navigation__dash');
+    let lastScrollTop = 0;
 
     function isOnTop(){
       let windowScrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -38,25 +39,20 @@ export default class Navigation {
       isOnTop();
     };
 
-    let dScroll = _.debounce(()=>{
-      isOnTop();
-    }, 200);
 
 
     let _scroll = function(){
       let timer = null;
-      window.addEventListener('scroll', ()=>{
-        dScroll();
-        if (timer !==null){
-          clearTimeout(timer);
-          nav.classList.add('scrolling');
-          navScrollSeq().animation.reverse();
+      window.addEventListener('scroll', _.throttle(()=>{
+        isOnTop();
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop){
+          navScrollSeq().animationDown.play();
+        } else {
+          navScrollSeq().animationUp.play();
         }
-        timer = setTimeout(()=>{
-          nav.classList.remove('scrolling');
-          navScrollSeq().animation.play();
-        }, 200)
-      }, false);
+        lastScrollTop = st;
+      }, 500), false);
     }()
 
     return {
