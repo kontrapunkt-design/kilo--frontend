@@ -86,7 +86,7 @@ export default()=>{
       //get wipe transiton here
       let targetHeight = lastElementClicked.offsetHeight;
       thumbnailWipeSeq().animation.play();
-      navScrollSeq().animation.reverse(0);
+      navScrollSeq().animationDown.reverse(0);
       deferred.resolve()
       return deferred.promise;
     },
@@ -129,7 +129,7 @@ export default()=>{
           TweenMax.set(myWipeLoading, {
             left: 0,
           });
-          navScrollSeq().animation.play();
+          navScrollSeq().animationUp.play();
           this.newContainer.style.visibility = 'visible';
           document.body.style.overflow = 'auto';
         }, 1200)
@@ -151,7 +151,7 @@ export default()=>{
       pageWipeSeq(
         deferred.resolve()
       ).animation.play();
-      navScrollSeq().animation.reverse(0);
+      navScrollSeq().animationDown.play(0);
       return deferred.promise;
     },
     showNewPage: function(){
@@ -188,7 +188,7 @@ export default()=>{
           left: 0,
         });
         this.done()
-        navScrollSeq().animation.play();
+        navScrollSeq().animationUp.play(0);
         pageLoadingSeq().animation.play();
       });
     }

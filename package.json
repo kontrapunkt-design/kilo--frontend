@@ -72,6 +72,7 @@
     "isotope-layout": "^3.0.4",
     "jade": "~1.11.0",
     "js-yaml": "~3.8.1",
+    "lazysizes": "^4.0.0-rc3",
     "loadash": "0.0.1",
     "lodash": "^4.17.4",
     "minimist": "~1.2.0",
