@@ -16,10 +16,11 @@ mixin hero(spec)
               rect(id="bar" fill="#FFFFFF" x="0" y="0" width="60" height="20")
               animateTransform(attributeName="transform"
                 attributeType="XML"
-                type="translate"
-                values="0 0; 60 0; 0 0"
-                dur="0.5s"
+                type="scale"
+                values="0 1; 2 1; 2 1; 0 1"
+                dur="1s"
                 fill="freeze"
+                animationDirection = "alternate-reverse"
                 repeatCount="indefinite")
         video(class="" autoplay loop muted poster="" id="heroVideo")
           source(src="../videos/" + spec.__video + ".mp4"  type="video/mp4")

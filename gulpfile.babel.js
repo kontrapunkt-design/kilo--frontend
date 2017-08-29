@@ -67,5 +67,6 @@ gulp.task('serve', [
   'watch'
 ]);
 
+gulp.task('deploy', ['copyToDeploy', 'surge']);
 // Testing
 gulp.task('test', ['eslint']);

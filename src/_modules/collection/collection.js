@@ -1,5 +1,6 @@
 'use strict';
 import Isotope from 'isotope-layout';
+import InfiniteScroll from 'infinite-scroll';
 import imagesLoaded from 'imagesloaded';
 import ThumbnailProject from '../../_modules/thumbnail--project/thumbnail--project'
 import $ from 'jquery';

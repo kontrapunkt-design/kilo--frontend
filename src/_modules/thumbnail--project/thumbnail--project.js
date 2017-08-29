@@ -1,7 +1,6 @@
 'use strict';
 import gsap from 'gsap'
 import {thumbnailProjectHoverSeq} from '../../_scripts/globalAnimations'
-import _ from 'lodash'
 
 
 export default class ThumbnailProject {
